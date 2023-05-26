@@ -25,7 +25,7 @@
     align-items: center;
   }
   
-  .dialog .close-button {
+  .dialog-close-button {
     position: absolute;
     top: var(--content-spacing-medium);
     right: var(--content-spacing-medium);
@@ -36,7 +36,7 @@
     cursor: pointer;
   }
   
-  .dialog .animated-icon {
+  .dialog-close-button-icon {
     --animated-icon-width: 24px;
     --animated-icon-background: transparent;
     --animated-icon-color: var(--color-utils-black);

@@ -20,7 +20,7 @@
     align-items: center;
   }
   
-  .toast .close-button {
+  .toast-close-button {
     position: absolute;
     top: var(--content-spacing-small);
     right: var(--content-spacing-small);
@@ -31,7 +31,7 @@
     cursor: pointer;
   }
   
-  .toast .animated-icon {
+  .toast-close-button-icon {
     --animated-icon-width: 24px;
     --animated-icon-background: transparent;
     --animated-icon-color: var(--color-utils-offwhite);
@@ -80,11 +80,11 @@
     margin: var(--content-spacing-large) 0;
   }
   
-  .toast-actions .button {
+  .toast-actions-button {
     padding: 0 var(--content-spacing-large);
   }
   
-  .toast-actions .button:not(:last-child) {
+  .toast-actions-button:not(:last-child) {
     margin-right: var(--content-spacing-large);
   }
   

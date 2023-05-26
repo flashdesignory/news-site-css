@@ -30,7 +30,7 @@
     z-index: var(--index-nav-label);
   }
   
-  .navbar .animated-icon {
+  .navbar-label-icon {
     --animated-icon-width: 24px;
     --animated-icon-background: transparent;
     --animated-icon-color: var(--color-utils-offwhite);
@@ -39,26 +39,17 @@
   
   /* stylelint-disable */
   #navbar-toggle:checked
-    ~ .navbar-label
-    .hamburger-icon
-    .animated-icon-inner
-    span:nth-child(2) {
+    ~ .navbar-label div span span:nth-child(2) {
     transform: scale(0);
   }
   
   #navbar-toggle:checked
-    ~ .navbar-label
-    .hamburger-icon
-    .animated-icon-inner
-    span:nth-child(1) {
+    ~ .navbar-label div span span:nth-child(1) {
     transform: rotate(45deg);
   }
   
   #navbar-toggle:checked
-    ~ .navbar-label
-    .hamburger-icon
-    .animated-icon-inner
-    span:nth-child(3) {
+    ~ .navbar-label div span span:nth-child(3) {
     transform: rotate(-45deg);
   }
   /* stylelint-enable */
@@ -88,6 +79,14 @@
   
   .navbar-item:not(:last-child) {
     margin-right: var(--content-spacing-large);
+  }
+
+  .navbar-dropdown-item {
+    margin-bottom: var(--content-spacing-small);
+  }
+
+  .navbar-dropdown-item:not(:last-child)  {
+    margin-right: 0;
   }
   
   .navbar-item a {
@@ -122,7 +121,7 @@
     display: none;
   }
 
-  .navbar .icons-group {
+  .navbar-icons {
     display: none;
   }
   
@@ -175,33 +174,6 @@
       overflow: hidden;
     }
 
-    /* dropdown override */
-    .navbar .dropdown {
-      width: 100%;
-    }
-
-    .navbar .dropdown-toggle {
-      top: 0;
-      width: 100%;
-    }
-
-    .navbar .dropdown-label {
-      /* offset right arrow to center text */
-      padding: 0 0 0 16px;
-    }
-
-    .navbar .dropdown-content {
-      flex-direction: column;
-      align-items: flex-start;
-      width: 100%;
-      box-shadow: none;
-      position: relative;
-      left: auto;
-      top: auto;
-      padding: 0;
-      margin-top: var(--content-spacing-small);
-    }
-
     /** display current page in navbar **/
     .navbar-active-path {
       display: flex;
@@ -216,8 +188,9 @@
       pointer-events: none;
     }
 
-    .navbar .icons-group {
+    .navbar-icons {
       display: flex;
+      width: 100%;
       justify-content: center;
       margin: var(--content-spacing-xlarge) 0;
     }

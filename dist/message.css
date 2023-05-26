@@ -17,7 +17,7 @@
   align-items: center;
 }
 
-.message .close-button {
+.message-close-button {
     position: absolute;
     top: var(--content-spacing-small);
     right: var(--content-spacing-small);
@@ -30,7 +30,7 @@
     cursor: pointer;
   }
   
-  .message .animated-icon {
+  .message-close-button-icon {
     --animated-icon-width: 24px;
     --animated-icon-background: transparent;
     --animated-icon-color: var(--color-utils-offwhite);
