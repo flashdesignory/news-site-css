@@ -20,7 +20,7 @@ importing the styles in JavaScript:
 import "news-site-css/dist/global.css";
 ```
 
-importing a css module (React example):
+importing a css module in React:
 ``` javascript
 import styles from "news-site-css/dist/footer.module.css";
 
