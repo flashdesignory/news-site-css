@@ -22,7 +22,10 @@
     "dev": "http-server ./ -p 7005 -c-1 --cors -o",
     "build": "rollup -c --bundleConfigAsCjs",
     "serve": "http-server ./dist/ -p 7007 -c-1 --cors -o",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "release:major": "npm version $(semver $npm_package_version -i major) && npm publish --tag latest",
+    "release:minor": "npm version $(semver $npm_package_version -i minor) && npm publish --tag latest",
+    "release:patch": "npm version $(semver $npm_package_version -i patch) && npm publish --tag latest"
   },
   "devDependencies": {
     "@rollup/plugin-babel": "^6.0.3",
@@ -35,6 +38,7 @@
     "rollup-plugin-cleaner": "^1.0.0",
     "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-import-css": "^3.2.1",
+    "semver": "^7.5.1",
     "stylelint": "^15.6.2",
     "stylelint-config-standard": "^33.0.0"
   }
