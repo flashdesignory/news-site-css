@@ -47,6 +47,10 @@ export default {
                 {
                     src: ["src/css/*"],
                     file: "dist/index.css"
+                },
+                {
+                    src: ["src/css/*"],
+                    dest: "dist/"
                 }
             ]
         }),
