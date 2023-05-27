@@ -5,6 +5,7 @@ import "../css/icons-group.css";
 import "../css/button.css";
 import "../css/a11y.css";
 import "../css/layout.css";
+import "../css/advertisement.css";
 import "../css/header.css";
 import "../css/nav.css";
 import "../css/navbar.css";
