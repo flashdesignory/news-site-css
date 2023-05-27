@@ -3,7 +3,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import babel from "@rollup/plugin-babel";
 import css from "rollup-plugin-import-css";
-import copy from "rollup-plugin-copy";
+import copy from "rollup-plugin-copy-merge";
 import cleaner from 'rollup-plugin-cleaner';
 
 // `npm run build` -> `production` is true
@@ -25,10 +25,6 @@ export default {
             ]
         }),
         css({
-            minify: false,
-            output: "dist/index.css"
-        }),
-        css({
             minify: true,
             output: "dist/index.min.css"
         }),
@@ -44,13 +40,13 @@ export default {
         copy({
             targets: [
                 {
-                    src: ["src/css/index.css"],
-                    dest: "dist/"
-                },
-                {
-                    src: ["src/css/*", "!src/css/index.css", "!src/css/partials.css", "!src/css/global.css"],
+                    src: ["src/css/*", "!src/css/partials.css", "!src/css/global.css"],
                     dest: "dist/",
                    rename: (name, extension) => `${name}.module.${extension}`
+                },
+                {
+                    src: ["src/css/*"],
+                    file: "dist/index.css"
                 }
             ]
         }),
