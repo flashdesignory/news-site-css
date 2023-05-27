@@ -17,4 +17,4 @@ import "../css/toggle.css";
 import "../css/toast.css";
 import "../css/sitemap.css";
 import "../css/message.css";
-
+import "../css/sidebar.css";
