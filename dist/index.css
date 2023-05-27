@@ -227,6 +227,7 @@ but useful for people who use screen readers */
     text-decoration: none;
     color: var(--color-utils-black);
     transition: var(--transition-default);
+    display: flex;
   }
 
   .article-body a:hover {
