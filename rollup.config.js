@@ -45,7 +45,7 @@ export default {
                    rename: (name, extension) => `${name}.module.${extension}`
                 },
                 {
-                    src: ["src/css/*"],
+                    src: ["src/css/*", "!src/css/partials.css"],
                     file: "dist/index.css"
                 },
                 {
