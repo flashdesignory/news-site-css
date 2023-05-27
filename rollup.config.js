@@ -5,7 +5,6 @@ import babel from "@rollup/plugin-babel";
 import css from "rollup-plugin-import-css";
 import copy from "rollup-plugin-copy";
 import cleaner from 'rollup-plugin-cleaner';
-import html from '@rollup/plugin-html';
 
 // `npm run build` -> `production` is true
 // `npm run dev` -> `production` is false
@@ -24,6 +23,10 @@ export default {
             targets: [
               './dist/'
             ]
+        }),
+        css({
+            minify: false,
+            output: "dist/index.css"
         }),
         css({
             minify: true,
@@ -48,14 +51,9 @@ export default {
                     src: ["src/css/*", "!src/css/index.css", "!src/css/partials.css", "!src/css/global.css"],
                     dest: "dist/",
                    rename: (name, extension) => `${name}.module.${extension}`
-                },
-                {
-                    src: ["src/css/*", "!src/css/index.css"],
-                    dest: "dist/",
                 }
             ]
         }),
-        html(),
         production && terser(),
     ],
 };
