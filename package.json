@@ -20,7 +20,6 @@
     "lint": "stylelint \"src/css/*.css\"",
     "dev": "http-server ./ -p 7005 -c-1 --cors -o",
     "build": "rollup -c --bundleConfigAsCjs",
-    "serve": "http-server ./dist/ -p 7007 -c-1 --cors -o",
     "release:major": "npm run build && npm version $(semver $npm_package_version -i major) && npm publish --tag latest && git push",
     "release:minor": "npm run build && npm version $(semver $npm_package_version -i minor) && npm publish --tag latest && git push",
     "release:patch": "npm run build && npm version $(semver $npm_package_version -i patch) && npm publish --tag latest && git push"
