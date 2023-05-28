@@ -41,5 +41,6 @@
     "semver": "^7.5.1",
     "stylelint": "^15.6.2",
     "stylelint-config-standard": "^33.0.0"
-  }
+  },
+  "files": ["dist"]
 }
