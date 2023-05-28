@@ -1,6 +1,6 @@
 {
   "name": "news-site-css",
-  "version": "1.6.0",
+  "version": "1.5.0",
   "description": "News-site styles.",
   "author": "Thorsten Kober",
   "license": "ISC",
@@ -41,5 +41,6 @@
     "semver": "^7.5.1",
     "stylelint": "^15.6.2",
     "stylelint-config-standard": "^33.0.0"
-  }
+  },
+  "files": ["/dist"]
 }
