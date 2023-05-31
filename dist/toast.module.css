@@ -80,11 +80,11 @@
     margin: var(--content-spacing-large) 0;
   }
   
-  .toast-actions-button {
+  .toast-actions .toast-actions-button {
     padding: 0 var(--content-spacing-large);
   }
   
-  .toast-actions-button:not(:last-child) {
+  .toast-actions .toast-actions-button:not(:last-child) {
     margin-right: var(--content-spacing-large);
   }
   
