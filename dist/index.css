@@ -74,6 +74,7 @@ but useful for people who use screen readers */
     position: absolute;
     top: 0;
     left: 0;
+    font-size: 0;
   }
   
   img::after {
