@@ -367,6 +367,10 @@ html[dir="rtl"] .hamburger-icon .animated-icon-inner span {
     right: var(--animated-icon-center-negative);
     left: unset;
 }
+
+html[dir="rtl"] .arrow-icon {
+    transform: rotate(180deg);
+}
 /** RTL ICONS END **/
 .icons-group {
     display: flex;
