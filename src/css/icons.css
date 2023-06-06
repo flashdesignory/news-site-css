@@ -161,9 +161,9 @@ html[dir="rtl"] .animated-icon {
     left: var(--animated-icon-center-negative);
 }
 
-/** RTL DIALOG START **/
+/** RTL ICONS START **/
 html[dir="rtl"] .hamburger-icon .animated-icon-inner span {
     right: var(--animated-icon-center-negative);
     left: unset;
 }
-/** RTL DIALOG END **/
+/** RTL ICONS END **/

@@ -45,10 +45,10 @@
 }
 /* stylelint-enable */
 
-/** RTL ARTICLE START **/
+/** RTL ICONS-GROUP START **/
 html[dir="rtl"] .icons-group .icons-group-item:not(:last-child) {
     margin-left: var(--content-spacing-large);
     margin-right: unset;
 }
 
-/** RTL ARTICLE END **/
+/** RTL ICONS-GROUP END **/

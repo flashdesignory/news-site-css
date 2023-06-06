@@ -11,13 +11,13 @@ but useful for people who use screen readers */
     overflow: hidden;
     position: absolute;
     white-space: nowrap;
-  }
-  
-  /* apply reduced-motion class to parent element
+}
+
+/* apply reduced-motion class to parent element
   to manually force reduced-motion on child elements */
-  .reduced-motion *,
-  .reduced-motion *::before,
-  .reduced-motion *::after {
+.reduced-motion *,
+.reduced-motion *::before,
+.reduced-motion *::after {
     animation-delay: -1ms !important;
     animation-duration: 1ms !important;
     animation-iteration-count: 1 !important;
@@ -25,24 +25,24 @@ but useful for people who use screen readers */
     scroll-behavior: auto !important;
     transition-duration: 0s !important;
     transition-delay: 0s !important;
-  }
-  
-  @media (prefers-reduced-motion: reduce) {
+}
+
+@media (prefers-reduced-motion: reduce) {
     *,
     ::before,
     ::after {
-      animation-delay: -1ms !important;
-      animation-duration: 1ms !important;
-      animation-iteration-count: 1 !important;
-      background-attachment: initial !important;
-      scroll-behavior: auto !important;
-      transition-duration: 0s !important;
-      transition-delay: 0s !important;
+        animation-delay: -1ms !important;
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+        background-attachment: initial !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0s !important;
+        transition-delay: 0s !important;
     }
-  }
-  
-  /* Skip Link */
-  .skip-link {
+}
+
+/* Skip Link */
+.skip-link {
     background: var(--color-utils-red);
     color: var(--color-utils-white);
     font-weight: var(--font-weight-more-bold);
@@ -54,19 +54,19 @@ but useful for people who use screen readers */
     transform: translate(-50%, -100%);
     z-index: var(--index-somewhatimportant);
     text-decoration: none;
-  }
-  
-  .skip-link:focus {
+}
+
+.skip-link:focus {
     transform: translate(-50%, 0%);
     transition: transform 0.3s ease;
-  }
-  
-  /* Broken Image */
-  img {
+}
+
+/* Broken Image */
+img {
     display: block;
-  }
-  
-  img::before {
+}
+
+img::before {
     content: "";
     width: 100%;
     height: 100%;
@@ -75,9 +75,9 @@ but useful for people who use screen readers */
     top: 0;
     left: 0;
     font-size: 0;
-  }
-  
-  img::after {
+}
+
+img::after {
     content: "\2639"" " attr(alt);
     font-size: var(--font-size-medium);
     color: var(--color-utils-white);
@@ -89,5 +89,4 @@ but useful for people who use screen readers */
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
+}

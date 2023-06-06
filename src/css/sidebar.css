@@ -103,7 +103,7 @@
     }
 }
 
-/** RTL DIALOG START **/
+/** RTL SIDEBAR START **/
 html[dir="rtl"] .sidebar {
     right: 0;
     left: unset;
@@ -118,4 +118,4 @@ html[dir="rtl"] .sidebar-close-button {
     right: unset;
 }
 
-/** RTL DIALOG END **/
+/** RTL SIDEBAR END **/

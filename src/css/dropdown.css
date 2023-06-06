@@ -82,6 +82,11 @@
     box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%);
 }
 
+html[dir="rtl"] .dropdown-content {
+    right: calc(var(--content-spacing-small) * -1);
+    left: unset;
+}
+
 .dropdown-toggle:checked ~ .dropdown-content {
     display: flex;
     flex-direction: column;
@@ -116,11 +121,6 @@
 /** RTL DROPDOWN START **/
 html[dir="rtl"] .dropdown-toggle {
     right: 0;
-    left: unset;
-}
-
-html[dir="rtl"] .dropdown-content {
-    right: calc(var(--content-spacing-small) * -1);
     left: unset;
 }
 
