@@ -22,13 +22,11 @@
         var(--animated-icon-bar-spacing) * -1
     );
 
+    --language-direction-adjustment: 1;
+
     width: var(--animated-icon-width);
     height: var(--animated-icon-width);
     background-color: var(--animated-icon-background);
-}
-
-html[dir="ltr"] .animated-icon {
-    --language-direction-adjustment: 1;
 }
 
 html[dir="rtl"] .animated-icon {
