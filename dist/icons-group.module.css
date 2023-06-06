@@ -2,7 +2,7 @@
     display: flex;
 }
 
-.icons-group .icons-group-list{
+.icons-group .icons-group-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -11,7 +11,7 @@
     align-items: center;
 }
 
-.icons-group .icons-group-item{
+.icons-group .icons-group-item {
     position: relative;
 }
 
@@ -44,3 +44,11 @@
     fill: var(--color-utils-white);
 }
 /* stylelint-enable */
+
+/** RTL ICONS-GROUP START **/
+html[dir="rtl"] .icons-group .icons-group-item:not(:last-child) {
+    margin-left: var(--content-spacing-large);
+    margin-right: unset;
+}
+
+/** RTL ICONS-GROUP END **/
