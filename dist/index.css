@@ -1099,7 +1099,7 @@ html[dir="rtl"] .navbar-dropdown-item:not(:last-child) {
     /** display current page in navbar **/
     .navbar-active-path {
         display: flex;
-        margin: var(--content-spacing-small);
+        margin: 0 var(--content-spacing-small);
         color: var(--color-utils-white);
         background-color: var(--color-utils-gray-light);
         line-height: var(--nav-button-height);
