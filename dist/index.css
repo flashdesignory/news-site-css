@@ -1507,6 +1507,7 @@ html[dir="rtl"] .dropdown-label-text {
 .article-header::after {
     border-top: 1px solid var(--color-utils-offwhite);
     right: 0;
+    width: 100%;
 }
 
 /* stylelint-disable */
