@@ -69,6 +69,7 @@ export default {
                         "src/css/sitemap.css",
                         "src/css/message.css",
                         "src/css/sidebar.css",
+                        "src/css/modal.css",
                     ],
                     file: "dist/index.css",
                 },
