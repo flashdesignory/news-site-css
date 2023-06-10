@@ -2189,7 +2189,25 @@ html[dir="rtl"] .sidebar-close-button {
     width: 100%;
 }
 
+.modal-actions {
+    display: flex;
+    margin: var(--content-spacing-large) 0;
+}
+
+.modal-actions .modal-actions-button {
+    padding: 0 var(--content-spacing-large);
+}
+
+.modal-actions .modal-actions-button:not(:last-child) {
+    margin-right: var(--content-spacing-large);
+}
+
 /** RTL DIALOG START **/
+html[dir="rtl"] .modal-actions .modal-actions-button:not(:last-child) {
+    margin-left: var(--content-spacing-large);
+    margin-right: unset;
+}
+
 html[dir="rtl"] .modal-close-button {
     left: var(--content-spacing-medium);
     right: unset;
