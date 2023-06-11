@@ -85,6 +85,12 @@
     margin-right: var(--content-spacing-large);
 }
 
+@media (max-width: 420px) {
+    .modal-content {
+        width: calc(100% - var(--content-spacing-xxxlarge) * 2);
+    }
+}
+
 /** RTL DIALOG START **/
 html[dir="rtl"] .modal-actions .modal-actions-button:not(:last-child) {
     margin-left: var(--content-spacing-large);
