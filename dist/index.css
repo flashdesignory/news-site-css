@@ -2343,7 +2343,7 @@ html[dir="rtl"] .sidebar-close-button {
     margin-right: var(--content-spacing-large);
 }
 
-@media (max-width: 420px) {
+@media (max-width: 419px) {
     .modal-content {
         width: calc(100% - var(--content-spacing-xxxlarge) * 2);
     }
