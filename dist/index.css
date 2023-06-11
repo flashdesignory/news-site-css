@@ -644,7 +644,7 @@ img::after {
     flex-direction: column;
 }
 
-.form-container .input-container:not(:last-of-type) {
+.form-item:not(:last-of-type) {
     margin-right: 0;
     margin-bottom: var(--content-spacing-medium);
 }
