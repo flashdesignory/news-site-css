@@ -4,6 +4,8 @@ import "../css/icons.css";
 import "../css/icons-group.css";
 import "../css/button.css";
 import "../css/a11y.css";
+import "../css/input.css";
+import "../css/form.css";
 import "../css/layout.css";
 import "../css/advertisement.css";
 import "../css/header.css";
