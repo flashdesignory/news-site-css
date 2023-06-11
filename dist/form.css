@@ -42,5 +42,5 @@
 }
 
 .form-actions .form-actions-item:not(:last-child) {
-    margin-right: var(--content-spacing-large);
+    margin-right: var(--content-spacing-medium);
 }
