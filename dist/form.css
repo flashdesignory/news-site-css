@@ -28,4 +28,19 @@
 .form-container .input-container:not(:last-of-type) {
     margin-right: 0;
     margin-bottom: var(--content-spacing-medium);
-  }
+}
+
+.form-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.form-actions .form-actions-item {
+    height: 40px;
+    flex-grow: 1;
+}
+
+.form-actions .form-actions-item:not(:last-child) {
+    margin-right: var(--content-spacing-large);
+}
