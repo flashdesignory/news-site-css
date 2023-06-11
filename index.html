@@ -1781,8 +1781,8 @@
         </footer>
     </div>
     <div id="settings" class="dialog">
-      <a href="#" id="close-dialog-link" class="dialog-close-button">
-        <div class="dialog-close-button-icon animated-icon close-icon hover" title="Close Icon">
+      <a href="#" id="close-dialog-link" class="dialog-close-button" title="Close Icon">
+        <div class="dialog-close-button-icon animated-icon close-icon hover">
           <span class="animated-icon-inner">
             <span></span><span></span>
           </span>
@@ -1811,8 +1811,9 @@
           href="#"
           id="close-sidebar-link"
           class="sidebar-close-button"
+          title="Close Icon"
         >
-          <div class="sidebar-close-button-icon animated-icon close-icon hover" title="Close Icon">
+          <div class="sidebar-close-button-icon animated-icon close-icon hover">
             <span class="animated-icon-inner">
               <span></span>
               <span></span>
@@ -2095,8 +2096,8 @@
         </section>
     </div>
     <div id="notification" class="toast">
-        <a href="#" id="close-toast-link" class="toast-close-button">
-            <div class="toast-close-button-icon animated-icon close-icon hover" title="Close Icon">
+        <a href="#" id="close-toast-link" class="toast-close-button" title="Close Icon">
+            <div class="toast-close-button-icon animated-icon close-icon hover">
                 <span class="animated-icon-inner"><span></span><span></span></span>
             </div>
         </a>
@@ -2113,8 +2114,8 @@
     </div>
     <div id="login" class="modal">
         <div class="modal-content">
-            <a href="#" id="close-login-link" class="modal-close-button">
-                <div class="modal-close-button-icon animated-icon close-icon hover" title="Close Icon">
+            <a href="#" id="close-login-link" class="modal-close-button" title="Close Icon">
+                <div class="modal-close-button-icon animated-icon close-icon hover">
                   <span class="animated-icon-inner">
                     <span></span><span></span>
                   </span>
@@ -2128,19 +2129,19 @@
                     <div class="form-content">
                         <form id="form">
                             <div class="input-container form-item">
-                                <label class="label visually-hidden" for="input">Enter Something</label>
-                                <input class="input input-type-text" type="text" autocomplete="off" id="input" placeholder="Username">
+                                <label class="label visually-hidden" for="username">Enter Username</label>
+                                <input class="input input-type-text" type="text" autocomplete="off" id="username" placeholder="Username">
                             </div>
                             <div class="input-container form-item">
-                                <label class="label visually-hidden" for="input">Enter Something</label>
-                                <input class="input input-type-text" type="text" autocomplete="off" id="input" placeholder="Password">
+                                <label class="label visually-hidden" for="password">Enter Password</label>
+                                <input class="input input-type-text" type="text" autocomplete="off" id="password" placeholder="Password">
                             </div>
                             <div class="form-actions form-item">
                                 <div class="input-container form-actions-item">
                                     <label class="label visually-hidden" for="submit">submit form</label>
                                     <input class="input input-type-submit" type="submit" autocomplete="off" id="submit" value="Submit!">
                                 </div>
-                                <a href="#" id="toast-reject-button" class="button secondary-button dark form-actions-item">Cancel</a>
+                                <a href="#" id="modal-reject-button" class="button secondary-button dark form-actions-item">Cancel</a>
                             </div>
                         </form>
                     </div>
