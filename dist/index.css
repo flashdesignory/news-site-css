@@ -585,7 +585,7 @@ img::after {
     background-size: 1em;
   }
   
-  ::-webkit-calendar-picker-indicator {
+  .input-container .input[type="date"]::-webkit-calendar-picker-indicator {
     display: none;
   }
   
