@@ -4,6 +4,7 @@
     font-family: var(--font-family-default);
     max-width: 400px;
     position: relative;
+    height: 40px;
   }
   
   .input-container .label {
@@ -13,13 +14,13 @@
   
   .input-container .input {
     outline: 0;
-    padding: var(--content-spacing-medium);
+    padding: 0 var(--content-spacing-medium);
     border-radius: var(--border-radius-small);
     border: var(--border-width-medium) solid var(--color-utils-gray-light);
     color: var(--color-utils-gray-light);
     transition: var(--transition-default);
     width: 100%;
-    height: 40px;
+    height: 100%;
   }
   
   .input-container .input[type="submit"] {
