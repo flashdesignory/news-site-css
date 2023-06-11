@@ -54,6 +54,8 @@ export default {
                         "src/css/icons-group.css",
                         "src/css/button.css",
                         "src/css/a11y.css",
+                        "src/css/input.css",
+                        "src/css/form.css",
                         "src/css/layout.css",
                         "src/css/advertisement.css",
                         "src/css/header.css",

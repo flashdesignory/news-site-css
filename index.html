@@ -2124,11 +2124,24 @@
                 <h2>Login</h2>
               </header>
               <section class="modal-body">
-               Log in here...
-               <div class="modal-actions">
-                    <button id="modal-login-button" class="button primary-button dark modal-actions-button">Login</button>
-                    <button id="modal-cancel-button" class="button secondary-button dark modal-actions-button">Cancel</button>
-                </div>
+               <div class="form-container">
+                    <div class="form-content">
+                        <form id="form">
+                            <div class="input-container">
+                                <label class="label visually-hidden" for="input">Enter Something</label>
+                                <input class="input input-type-text" type="text" autocomplete="off" id="input" placeholder="Username">
+                            </div>
+                            <div class="input-container">
+                                <label class="label visually-hidden" for="input">Enter Something</label>
+                                <input class="input input-type-text" type="text" autocomplete="off" id="input" placeholder="Password">
+                            </div>
+                            <div class="input-container">
+                                <label class="label visually-hidden" for="submit">submit form</label>
+                                <input class="input input-type-submit" type="submit" autocomplete="off" id="submit" value="Submit!">
+                            </div>
+                        </form>
+                    </div>
+               </div>
               </section>
         </div>
     </div>
