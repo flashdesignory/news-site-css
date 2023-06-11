@@ -14,7 +14,7 @@
   .input-container .input {
     outline: 0;
     padding: var(--content-spacing-medium);
-    border-radius: var(--border-radius-medium);
+    border-radius: var(--border-radius-small);
     border: var(--border-width-medium) solid var(--color-utils-gray-light);
     color: var(--color-utils-gray-light);
     transition: var(--transition-default);
