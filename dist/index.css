@@ -1431,15 +1431,6 @@ html[dir="rtl"] .footer-links .footer-links-item:not(:last-child) {
     margin-bottom: var(--content-spacing-large);
 }
 
-@media (max-width: 767px) {
-    .dialog {
-        width: calc(100% - var(--content-spacing-xxxlarge) * 2);
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-    }
-}
-
 /** RTL DIALOG START **/
 html[dir="rtl"] .dialog {
     right: 40px;
@@ -1452,6 +1443,21 @@ html[dir="rtl"] .dialog-close-button {
 }
 
 /** RTL DIALOG END **/
+
+@media (max-width: 767px) {
+    .dialog {
+        width: calc(100% - var(--content-spacing-xxxlarge) * 2);
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    /** RTL DIALOG START **/
+    html[dir="rtl"] .dialog {
+        left: 0;
+        right: 0;
+    }
+}
 .dropdown {
     display: flex;
     flex-direction: column;
