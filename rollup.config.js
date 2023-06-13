@@ -1,14 +1,6 @@
-import terser from "@rollup/plugin-terser";
-import resolve from "@rollup/plugin-node-resolve";
-import commonjs from "@rollup/plugin-commonjs";
-import babel from "@rollup/plugin-babel";
 import css from "rollup-plugin-import-css";
 import copy from "rollup-plugin-copy-merge";
 import cleaner from "rollup-plugin-cleaner";
-
-// `npm run build` -> `production` is true
-// `npm run dev` -> `production` is false
-const production = !process.env.ROLLUP_WATCH;
 
 export default {
     input: "src/js/index.js",
@@ -26,15 +18,6 @@ export default {
             minify: true,
             output: "dist/index.min.css",
         }),
-        babel({
-            babelrc: false,
-        }),
-        resolve({
-            jsnext: true,
-            main: true,
-            browser: true,
-        }),
-        commonjs(),
         copy({
             targets: [
                 {
@@ -42,10 +25,6 @@ export default {
                     dest: "dist/",
                     rename: (name, extension) => `${name}.module.${extension}`,
                 },
-                /* {
-                    src: ["src/css/*", "!src/css/partials.css"],
-                    file: "dist/index.css"
-                }, */
                 {
                     src: [
                         "src/css/variables.css",
@@ -81,6 +60,5 @@ export default {
                 },
             ],
         }),
-        production && terser(),
     ],
 };
