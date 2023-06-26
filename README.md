@@ -33,3 +33,18 @@ export default function Footer() {
     return <footer className={styles.footer}></footer>;
 }
 ```
+constructable stylesheets:
+``` javascript
+import sheet from "news-site-css/dist/footer.constructable.js";
+
+document.adoptedStyleSheets = [...document.adoptedStyleSheets, sheet];
+```
+
+constructable stylesheets in shadow DOM:
+``` javascript
+import sheet from "news-site-css/dist/footer.constructable.js";
+
+const node = document.createElement('div');
+const shadow = node.attachShadow({ mode: 'open' });
+shadow.adoptedStyleSheets = [sheet];
+```
