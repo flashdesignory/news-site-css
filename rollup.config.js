@@ -2,6 +2,8 @@ import css from "rollup-plugin-import-css";
 import copy from "rollup-plugin-copy-merge";
 import cleaner from "rollup-plugin-cleaner";
 
+import { constructableCSS } from "./plugins/constructable-css/index.js";
+
 export default {
     input: "src/js/index.js",
     output: [
@@ -59,6 +61,10 @@ export default {
                     dest: "dist/",
                 },
             ],
+        }),
+        constructableCSS({
+            src: ["src/css/*", "!src/css/partials.css"],
+            dest: "dist/",
         }),
     ],
 };
