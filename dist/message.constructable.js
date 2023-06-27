@@ -1,3 +1,73 @@
 const sheet = new CSSStyleSheet();
-sheet.replaceSync(".message {\n    display: none;\n    flex-direction: column;\n    width: 100%;\n    background-color: var(--color-utils-red);\n    color: var(--color-utils-white);\n    font-family: var(--font-family-default);\n    padding: var(--content-spacing-large);\n    position: relative;\n}\n\n.message:target,\n.message.open {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n}\n\n.message-close-button {\n    position: absolute;\n    top: var(--content-spacing-small);\n    right: var(--content-spacing-small);\n    width: var(--icon-size-small);\n    height: var(--icon-size-small);\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    cursor: pointer;\n}\n\n.message-close-button-icon {\n    --animated-icon-width: 24px;\n    --animated-icon-background: transparent;\n    --animated-icon-color: var(--color-utils-offwhite);\n    --animated-icon-hover: var(--color-utils-white);\n}\n\n.message-header {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    font-weight: bold;\n    font-size: var(--font-size-medium);\n    text-transform: uppercase;\n    margin-bottom: var(--content-spacing-large);\n    width: 100%;\n}\n\n.message-body {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    width: 100%;\n}\n\n.message-description {\n    flex-direction: column;\n    width: 100%;\n    max-width: 600px;\n    display: inline-block;\n    text-align: center;\n}\n\nhtml[dir=\"rtl\"] .message-close-button {\n    left: var(--content-spacing-small);\n    right: unset;\n}\n\n");
+sheet.replaceSync(`.message {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--color-utils-red);
+    color: var(--color-utils-white);
+    font-family: var(--font-family-default);
+    padding: var(--content-spacing-large);
+    position: relative;
+}
+
+.message:target,
+.message.open {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-close-button {
+    position: absolute;
+    top: var(--content-spacing-small);
+    right: var(--content-spacing-small);
+    width: var(--icon-size-small);
+    height: var(--icon-size-small);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.message-close-button-icon {
+    --animated-icon-width: 24px;
+    --animated-icon-background: transparent;
+    --animated-icon-color: var(--color-utils-offwhite);
+    --animated-icon-hover: var(--color-utils-white);
+}
+
+.message-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    font-size: var(--font-size-medium);
+    text-transform: uppercase;
+    margin-bottom: var(--content-spacing-large);
+    width: 100%;
+}
+
+.message-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.message-description {
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    display: inline-block;
+    text-align: center;
+}
+
+html[dir="rtl"] .message-close-button {
+    left: var(--content-spacing-small);
+    right: unset;
+}
+
+`);
 export default sheet;

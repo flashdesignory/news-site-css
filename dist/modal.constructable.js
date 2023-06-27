@@ -1,3 +1,104 @@
 const sheet = new CSSStyleSheet();
-sheet.replaceSync(".modal {\n    position: fixed;\n    width: 100%;\n    height: 100%;\n    top: 0;\n    left: 0;\n        background-color: rgba(0, 0, 0, 0.5);\n        z-index: var(--index-important);\n    display: none;\n}\n\n.modal:target,\n.modal.open {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n}\n\n.modal-content {\n    position: absolute;\n    min-width: 300px;\n    max-width: 400px;\n    width: 100%;\n    min-height: 240px;\n    left: 50%;\n    top: 50%;\n    transform: translate(-50%, -50%);\n    background-color: var(--color-utils-white);\n    border-radius: var(--border-radius-medium);\n    box-shadow: 0 10px 18px var(--color-utils-gray);\n    font-family: var(--font-family-default);\n    color: var(--color-utils-black);\n    padding: var(--content-spacing-xlarge);\n}\n\n.modal-close-button {\n    position: absolute;\n    top: var(--content-spacing-medium);\n    right: var(--content-spacing-medium);\n    width: var(--icon-size-small);\n    height: var(--icon-size-small);\n    display: flex;\n    align-items: center;\n    cursor: pointer;\n}\n\n.modal-close-button-icon {\n    --animated-icon-width: 24px;\n    --animated-icon-background: transparent;\n    --animated-icon-color: var(--color-utils-black);\n    --animated-icon-hover: var(--color-utils-gray-light);\n}\n\n.modal-header {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    font-weight: bold;\n    font-size: var(--font-size-medium);\n    text-transform: uppercase;\n    margin-bottom: var(--content-spacing-large);\n    width: 100%;\n}\n\n.modal-body {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    width: 100%;\n}\n\n.modal-actions {\n    display: flex;\n    margin: var(--content-spacing-large) 0;\n}\n\n.modal-actions .modal-actions-button {\n    padding: 0 var(--content-spacing-large);\n}\n\n.modal-actions .modal-actions-button:not(:last-child) {\n    margin-right: var(--content-spacing-large);\n}\n\n@media (max-width: 419px) {\n    .modal-content {\n        width: calc(100% - var(--content-spacing-xxxlarge) * 2);\n    }\n}\n\nhtml[dir=\"rtl\"] .modal-actions .modal-actions-button:not(:last-child) {\n    margin-left: var(--content-spacing-large);\n    margin-right: unset;\n}\n\nhtml[dir=\"rtl\"] .modal-close-button {\n    left: var(--content-spacing-medium);\n    right: unset;\n}\n\n");
+sheet.replaceSync(`.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: var(--index-important);
+    display: none;
+}
+
+.modal:target,
+.modal.open {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: absolute;
+    min-width: 300px;
+    max-width: 400px;
+    width: 100%;
+    min-height: 240px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-utils-white);
+    border-radius: var(--border-radius-medium);
+    box-shadow: 0 10px 18px var(--color-utils-gray);
+    font-family: var(--font-family-default);
+    color: var(--color-utils-black);
+    padding: var(--content-spacing-xlarge);
+}
+
+.modal-close-button {
+    position: absolute;
+    top: var(--content-spacing-medium);
+    right: var(--content-spacing-medium);
+    width: var(--icon-size-small);
+    height: var(--icon-size-small);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.modal-close-button-icon {
+    --animated-icon-width: 24px;
+    --animated-icon-background: transparent;
+    --animated-icon-color: var(--color-utils-black);
+    --animated-icon-hover: var(--color-utils-gray-light);
+}
+
+.modal-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    font-size: var(--font-size-medium);
+    text-transform: uppercase;
+    margin-bottom: var(--content-spacing-large);
+    width: 100%;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.modal-actions {
+    display: flex;
+    margin: var(--content-spacing-large) 0;
+}
+
+.modal-actions .modal-actions-button {
+    padding: 0 var(--content-spacing-large);
+}
+
+.modal-actions .modal-actions-button:not(:last-child) {
+    margin-right: var(--content-spacing-large);
+}
+
+@media (max-width: 419px) {
+    .modal-content {
+        width: calc(100% - var(--content-spacing-xxxlarge) * 2);
+    }
+}
+
+html[dir="rtl"] .modal-actions .modal-actions-button:not(:last-child) {
+    margin-left: var(--content-spacing-large);
+    margin-right: unset;
+}
+
+html[dir="rtl"] .modal-close-button {
+    left: var(--content-spacing-medium);
+    right: unset;
+}
+
+`);
 export default sheet;

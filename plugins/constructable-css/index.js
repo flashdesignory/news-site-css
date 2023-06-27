@@ -5,7 +5,7 @@ import strip from "strip-comments";
 async function create(src, dest) {
     const contents = await fs.readFile(src, "utf-8");
     const stripped = strip(contents);
-    const output = `const sheet = new CSSStyleSheet();\nsheet.replaceSync(${JSON.stringify(stripped)});\nexport default sheet;\n`;
+    const output = `const sheet = new CSSStyleSheet();\nsheet.replaceSync(\`${stripped}\`);\nexport default sheet;\n`;
     const { name } = path.parse(src);
     const fileName = `${name}.constructable.js`;
     const outputPath = path.join(dest, fileName);

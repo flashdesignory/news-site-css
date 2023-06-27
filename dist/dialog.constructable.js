@@ -1,3 +1,101 @@
 const sheet = new CSSStyleSheet();
-sheet.replaceSync(".dialog {\n    position: fixed;\n    min-width: 300px;\n    max-width: 400px;\n    width: 100%;\n    height: 240px;\n    bottom: 40px;\n    left: 40px;\n    right: unset;\n    background-color: var(--color-utils-white);\n    z-index: var(--index-important);\n    border-radius: var(--border-radius-medium);\n    box-shadow: 0 10px 18px var(--color-utils-gray);\n    display: none;\n    font-family: var(--font-family-default);\n    color: var(--color-utils-black);\n    padding: var(--content-spacing-xlarge);\n}\n\n.dialog:target,\n.dialog.open {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n}\n\n.dialog-close-button {\n    position: absolute;\n    top: var(--content-spacing-medium);\n    right: var(--content-spacing-medium);\n    width: var(--icon-size-small);\n    height: var(--icon-size-small);\n    display: flex;\n    align-items: center;\n    cursor: pointer;\n}\n\n.dialog-close-button-icon {\n    --animated-icon-width: 24px;\n    --animated-icon-background: transparent;\n    --animated-icon-color: var(--color-utils-black);\n    --animated-icon-hover: var(--color-utils-gray-light);\n}\n\n.dialog-header {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    font-weight: bold;\n    font-size: var(--font-size-medium);\n    text-transform: uppercase;\n    margin-bottom: var(--content-spacing-large);\n    width: 100%;\n}\n\n.dialog-body {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    width: 100%;\n}\n\n.dialog-item {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    width: 100%;\n}\n\n.dialog-item:not(:last-child) {\n    margin-bottom: var(--content-spacing-large);\n}\n\nhtml[dir=\"rtl\"] .dialog {\n    right: 40px;\n    left: unset;\n}\n\nhtml[dir=\"rtl\"] .dialog-close-button {\n    left: var(--content-spacing-medium);\n    right: unset;\n}\n\n\n@media (max-width: 767px) {\n    .dialog {\n        width: calc(100% - var(--content-spacing-xxxlarge) * 2);\n        left: 0;\n        right: 0;\n        margin: 0 auto;\n    }\n\n        html[dir=\"rtl\"] .dialog {\n        left: 0;\n        right: 0;\n    }\n}\n");
+sheet.replaceSync(`.dialog {
+    position: fixed;
+    min-width: 300px;
+    max-width: 400px;
+    width: 100%;
+    height: 240px;
+    bottom: 40px;
+    left: 40px;
+    right: unset;
+    background-color: var(--color-utils-white);
+    z-index: var(--index-important);
+    border-radius: var(--border-radius-medium);
+    box-shadow: 0 10px 18px var(--color-utils-gray);
+    display: none;
+    font-family: var(--font-family-default);
+    color: var(--color-utils-black);
+    padding: var(--content-spacing-xlarge);
+}
+
+.dialog:target,
+.dialog.open {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialog-close-button {
+    position: absolute;
+    top: var(--content-spacing-medium);
+    right: var(--content-spacing-medium);
+    width: var(--icon-size-small);
+    height: var(--icon-size-small);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dialog-close-button-icon {
+    --animated-icon-width: 24px;
+    --animated-icon-background: transparent;
+    --animated-icon-color: var(--color-utils-black);
+    --animated-icon-hover: var(--color-utils-gray-light);
+}
+
+.dialog-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    font-size: var(--font-size-medium);
+    text-transform: uppercase;
+    margin-bottom: var(--content-spacing-large);
+    width: 100%;
+}
+
+.dialog-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.dialog-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.dialog-item:not(:last-child) {
+    margin-bottom: var(--content-spacing-large);
+}
+
+html[dir="rtl"] .dialog {
+    right: 40px;
+    left: unset;
+}
+
+html[dir="rtl"] .dialog-close-button {
+    left: var(--content-spacing-medium);
+    right: unset;
+}
+
+
+@media (max-width: 767px) {
+    .dialog {
+        width: calc(100% - var(--content-spacing-xxxlarge) * 2);
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+        html[dir="rtl"] .dialog {
+        left: 0;
+        right: 0;
+    }
+}
+`);
 export default sheet;

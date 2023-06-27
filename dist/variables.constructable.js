@@ -1,3 +1,74 @@
 const sheet = new CSSStyleSheet();
-sheet.replaceSync(":root {\n        --color-utils-red: #c00;\n    --color-utils-black: #0c0c0c;\n    --color-utils-white: #fff;\n    --color-utils-gray-dark: #2c2c2c;\n    --color-utils-gray: #404040;\n    --color-utils-gray-light: #6e6e6e;\n    --color-utils-gray-lighter: #b1b1b1;\n    --color-utils-offwhite: #e6e6e6;\n    --color-utils-red-light: #f50000;\n    --theme-advertisement-copy: #b1b1b1;\n    --theme-advertisement-icon-fill: #00aecd;\n    --theme-advertisement-icon-background: #fff;\n    --theme-image-placeholder: #e5e5e5;\n\n        --border-radius-xsmall: 2px;\n    --border-radius-small: 4px;\n    --border-radius-medium: 8px;\n    --border-radius-large: 16px;\n    --border-radius-50: 50%;\n    --border-width-small: 1px;\n    --border-width-medium: 2px;\n    --border-width-large: 4px;\n    --content-spacing-xsmall: 4px;\n    --content-spacing-small: 8px;\n    --content-spacing-medium: 12px;\n    --content-spacing-large: 16px;\n    --content-spacing-xlarge: 24px;\n    --content-spacing-xxlarge: 32px;\n    --content-spacing-xxxlarge: 40px;\n\n        --header-advertising-width: 970px;\n    --header-advertising-height: 250px;\n    --article-advertising-width: 300px;\n    --article-advertising-height: 250px;\n    --nav-height: 40px;\n    --nav-button-height: 32px;\n    --nav-button-height-mobile: 40px;\n    --footer-height: 32px;\n    --icon-size: 32px;\n    --icon-size-small: 24px;\n    --icon-size-tiny: 16px;\n\n        --font-size-small: 12px;\n    --font-size-medium: 16px;\n    --font-size-large: 20px;\n    --font-size-xlarge: 24px;\n    --font-size-xxlarge: 32px;\n    --font-size-xxxlarge: 40px;\n    --font-weight-less-bold: 400;\n    --font-weight-bold: 500;\n    --font-weight-more-bold: 600;\n    --font-family-default: sans-serif;\n\n        --transition-default: all 0.3s ease;\n\n        --index-important: 1000;\n    --index-advertisement: 400;\n    --index-somewhatimportant: 600;\n    --index-content: 80;\n    --indxe-content-title: 90;\n    --index-nav: 100;\n    --index-nav-input: 101;\n    --index-nav-label: 102;\n    --index-nav-mobile: 500;\n    --index-header: 100;\n    --index-header-button: 101;\n    --index-dropdown: 200;\n    --index-dropdown-input: 201;\n    --index-dropdown-label: 202;\n}\n");
+sheet.replaceSync(`:root {
+        --color-utils-red: #c00;
+    --color-utils-black: #0c0c0c;
+    --color-utils-white: #fff;
+    --color-utils-gray-dark: #2c2c2c;
+    --color-utils-gray: #404040;
+    --color-utils-gray-light: #6e6e6e;
+    --color-utils-gray-lighter: #b1b1b1;
+    --color-utils-offwhite: #e6e6e6;
+    --color-utils-red-light: #f50000;
+    --theme-advertisement-copy: #b1b1b1;
+    --theme-advertisement-icon-fill: #00aecd;
+    --theme-advertisement-icon-background: #fff;
+    --theme-image-placeholder: #e5e5e5;
+
+        --border-radius-xsmall: 2px;
+    --border-radius-small: 4px;
+    --border-radius-medium: 8px;
+    --border-radius-large: 16px;
+    --border-radius-50: 50%;
+    --border-width-small: 1px;
+    --border-width-medium: 2px;
+    --border-width-large: 4px;
+    --content-spacing-xsmall: 4px;
+    --content-spacing-small: 8px;
+    --content-spacing-medium: 12px;
+    --content-spacing-large: 16px;
+    --content-spacing-xlarge: 24px;
+    --content-spacing-xxlarge: 32px;
+    --content-spacing-xxxlarge: 40px;
+
+        --header-advertising-width: 970px;
+    --header-advertising-height: 250px;
+    --article-advertising-width: 300px;
+    --article-advertising-height: 250px;
+    --nav-height: 40px;
+    --nav-button-height: 32px;
+    --nav-button-height-mobile: 40px;
+    --footer-height: 32px;
+    --icon-size: 32px;
+    --icon-size-small: 24px;
+    --icon-size-tiny: 16px;
+
+        --font-size-small: 12px;
+    --font-size-medium: 16px;
+    --font-size-large: 20px;
+    --font-size-xlarge: 24px;
+    --font-size-xxlarge: 32px;
+    --font-size-xxxlarge: 40px;
+    --font-weight-less-bold: 400;
+    --font-weight-bold: 500;
+    --font-weight-more-bold: 600;
+    --font-family-default: sans-serif;
+
+        --transition-default: all 0.3s ease;
+
+        --index-important: 1000;
+    --index-advertisement: 400;
+    --index-somewhatimportant: 600;
+    --index-content: 80;
+    --indxe-content-title: 90;
+    --index-nav: 100;
+    --index-nav-input: 101;
+    --index-nav-label: 102;
+    --index-nav-mobile: 500;
+    --index-header: 100;
+    --index-header-button: 101;
+    --index-dropdown: 200;
+    --index-dropdown-input: 201;
+    --index-dropdown-label: 202;
+}
+`);
 export default sheet;

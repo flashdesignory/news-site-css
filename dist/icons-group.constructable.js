@@ -1,3 +1,53 @@
 const sheet = new CSSStyleSheet();
-sheet.replaceSync(".icons-group {\n    display: flex;\n}\n\n.icons-group .icons-group-list {\n    list-style-type: none;\n    padding: 0;\n    margin: 0;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n}\n\n.icons-group .icons-group-item {\n    position: relative;\n}\n\n.icons-group .icons-group-item:not(:last-child) {\n    margin-right: var(--content-spacing-large);\n}\n\n.icons-group .icons-group-item button {\n    cursor: pointer;\n    display: flex;\n    width: var(--icon-size-small);\n    height: var(--icon-size-small);\n}\n\n.group-icon {\n    display: flex;\n    width: var(--icon-size-small);\n    height: var(--icon-size-small);\n    position: relative;\n    background-color: var(--color-utils-black);\n}\n\n.group-icon svg path {\n    fill: var(--color-utils-offwhite);\n    transition: fill 0.3s ease;\n}\n\n.icons-group li:hover .group-icon svg path {\n    fill: var(--color-utils-white);\n}\n\nhtml[dir=\"rtl\"] .icons-group .icons-group-item:not(:last-child) {\n    margin-left: var(--content-spacing-large);\n    margin-right: unset;\n}\n\n");
+sheet.replaceSync(`.icons-group {
+    display: flex;
+}
+
+.icons-group .icons-group-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.icons-group .icons-group-item {
+    position: relative;
+}
+
+.icons-group .icons-group-item:not(:last-child) {
+    margin-right: var(--content-spacing-large);
+}
+
+.icons-group .icons-group-item button {
+    cursor: pointer;
+    display: flex;
+    width: var(--icon-size-small);
+    height: var(--icon-size-small);
+}
+
+.group-icon {
+    display: flex;
+    width: var(--icon-size-small);
+    height: var(--icon-size-small);
+    position: relative;
+    background-color: var(--color-utils-black);
+}
+
+.group-icon svg path {
+    fill: var(--color-utils-offwhite);
+    transition: fill 0.3s ease;
+}
+
+.icons-group li:hover .group-icon svg path {
+    fill: var(--color-utils-white);
+}
+
+html[dir="rtl"] .icons-group .icons-group-item:not(:last-child) {
+    margin-left: var(--content-spacing-large);
+    margin-right: unset;
+}
+
+`);
 export default sheet;

@@ -1,3 +1,22 @@
 const sheet = new CSSStyleSheet();
-sheet.replaceSync(".truncate-singleline {\n    width: 100%;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    display: block !important;\n}\n\n.truncate-multiline {\n    display: -webkit-box !important;\n    -webkit-line-clamp: 2;\n    -webkit-box-orient: vertical;\n    width: 100%;\n    overflow: hidden;\n}\n\n.truncate-multiline-3 {\n    -webkit-line-clamp: 3;\n}\n");
+sheet.replaceSync(`.truncate-singleline {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block !important;
+}
+
+.truncate-multiline {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    width: 100%;
+    overflow: hidden;
+}
+
+.truncate-multiline-3 {
+    -webkit-line-clamp: 3;
+}
+`);
 export default sheet;

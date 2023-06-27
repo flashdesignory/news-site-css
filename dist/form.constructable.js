@@ -1,3 +1,55 @@
 const sheet = new CSSStyleSheet();
-sheet.replaceSync(".form-container {\n    display: flex;\n    flex-direction: column;\n    background: var(--color-utils-offwhite);\n    width: 100%;\n    max-width: 400px;\n    font-family: var(--font-family-default);\n}\n\n.form-content {\n    max-width: 400px;\n    width: 100%;\n    background: var(--color-utils-white);\n    border-radius: var(--border-radius-small);\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-direction: row;\n}\n\n.form-container form {\n    display: flex;\n    flex: 1;\n    justify-content: space-between;\n    flex-direction: column;\n}\n\n.form-item:not(:last-of-type) {\n    margin-right: 0;\n    margin-bottom: var(--content-spacing-medium);\n}\n\n.form-actions {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n}\n\n.form-actions .form-actions-item {\n    height: 40px;\n    flex-grow: 1;\n}\n\n.form-actions .form-actions-item:not(:last-child) {\n    margin-right: var(--content-spacing-medium);\n}\n\nhtml[dir=\"rtl\"] .form-actions .form-actions-item:not(:last-child) {\n    margin-left: var(--content-spacing-medium);\n    margin-right: unset;\n}\n\n");
+sheet.replaceSync(`.form-container {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-utils-offwhite);
+    width: 100%;
+    max-width: 400px;
+    font-family: var(--font-family-default);
+}
+
+.form-content {
+    max-width: 400px;
+    width: 100%;
+    background: var(--color-utils-white);
+    border-radius: var(--border-radius-small);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.form-container form {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.form-item:not(:last-of-type) {
+    margin-right: 0;
+    margin-bottom: var(--content-spacing-medium);
+}
+
+.form-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.form-actions .form-actions-item {
+    height: 40px;
+    flex-grow: 1;
+}
+
+.form-actions .form-actions-item:not(:last-child) {
+    margin-right: var(--content-spacing-medium);
+}
+
+html[dir="rtl"] .form-actions .form-actions-item:not(:last-child) {
+    margin-left: var(--content-spacing-medium);
+    margin-right: unset;
+}
+
+`);
 export default sheet;

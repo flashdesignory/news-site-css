@@ -1,3 +1,67 @@
 const sheet = new CSSStyleSheet();
-sheet.replaceSync(".sitemap {\n    display: flex;\n    flex-direction: column;\n    width: 100%;\n}\n\n.sitemap a {\n    color: var(--color-utils-offwhite);\n    transition: var(--transition-default);\n    font-size: 14px;\n    text-decoration: none;\n}\n\n.sitemap a:hover {\n    color: var(--color-utils-white);\n    text-decoration: underline;\n}\n\n.sitemap a.active,\n.sitemap a.active:hover {\n    color: var(--color-utils-red-light);\n    text-decoration: none;\n}\n\n.sitemap-list {\n    display: flex;\n    flex-wrap: wrap;\n    margin: 0;\n    padding: 0;\n    list-style-type: none;\n}\n\n.sitemap-item {\n    margin-bottom: var(--content-spacing-large);\n    width: calc(100% / 6);\n}\n\n.sitemap-header {\n    font-size: var(--font-size-large);\n    margin-bottom: var(--content-spacing-medium);\n    font-weight: var(--font-weight-bold);\n}\n\n.sitemap-sublist {\n    margin: 0;\n    padding: 0;\n    list-style-type: none;\n}\n\n.sitemap-subitem {\n    line-height: var(--font-size-xlarge);\n}\n\n@media (max-width: 767px) {\n    .sitemap-item {\n        width: calc(100% / 2);\n    }\n}\n\n@media (min-width: 768px) and (max-width: 1199px) {\n    .sitemap-item {\n        width: calc(100% / 4);\n    }\n}\n");
+sheet.replaceSync(`.sitemap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.sitemap a {
+    color: var(--color-utils-offwhite);
+    transition: var(--transition-default);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.sitemap a:hover {
+    color: var(--color-utils-white);
+    text-decoration: underline;
+}
+
+.sitemap a.active,
+.sitemap a.active:hover {
+    color: var(--color-utils-red-light);
+    text-decoration: none;
+}
+
+.sitemap-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.sitemap-item {
+    margin-bottom: var(--content-spacing-large);
+    width: calc(100% / 6);
+}
+
+.sitemap-header {
+    font-size: var(--font-size-large);
+    margin-bottom: var(--content-spacing-medium);
+    font-weight: var(--font-weight-bold);
+}
+
+.sitemap-sublist {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.sitemap-subitem {
+    line-height: var(--font-size-xlarge);
+}
+
+@media (max-width: 767px) {
+    .sitemap-item {
+        width: calc(100% / 2);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .sitemap-item {
+        width: calc(100% / 4);
+    }
+}
+`);
 export default sheet;

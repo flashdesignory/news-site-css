@@ -1,3 +1,101 @@
 const sheet = new CSSStyleSheet();
-sheet.replaceSync(".toast {\n    position: fixed;\n    left: 0;\n    bottom: 0;\n    display: none;\n    width: 100%;\n    min-height: 100px;\n    color: var(--color-utils-offwhite);\n    background-color: rgb(0 0 0 / 75%);\n    font-family: var(--font-family-default);\n    z-index: var(--index-important);\n    padding: var(--content-spacing-xlarge);\n}\n\n.toast:target,\n.toast.open {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n}\n\n.toast-close-button {\n    position: absolute;\n    top: var(--content-spacing-small);\n    right: var(--content-spacing-small);\n    width: var(--icon-size-small);\n    height: var(--icon-size-small);\n    display: flex;\n    align-items: center;\n    cursor: pointer;\n}\n\n.toast-close-button-icon {\n    --animated-icon-width: 24px;\n    --animated-icon-background: transparent;\n    --animated-icon-color: var(--color-utils-offwhite);\n    --animated-icon-hover: var(--color-utils-white);\n}\n\n.toast-header {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    font-weight: bold;\n    font-size: var(--font-size-medium);\n    text-transform: uppercase;\n    margin-bottom: var(--content-spacing-large);\n    width: 100%;\n}\n\n.toast-body {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    width: 100%;\n}\n\n.toast-description {\n    flex-direction: column;\n    width: 100%;\n    max-width: 600px;\n    display: inline-block;\n    text-align: center;\n}\n\n.toast-description a {\n    color: var(--color-utils-offwhite);\n    transition: var(--transition-default);\n}\n\n.toast-description a:hover {\n    color: var(--color-utils-white);\n}\n\n.toast-actions {\n    display: flex;\n    margin: var(--content-spacing-large) 0;\n}\n\n.toast-actions .toast-actions-button {\n    padding: 0 var(--content-spacing-large);\n}\n\n.toast-actions .toast-actions-button:not(:last-child) {\n    margin-right: var(--content-spacing-large);\n}\n\nhtml[dir=\"rtl\"] .toast-actions .toast-actions-button:not(:last-child) {\n    margin-left: var(--content-spacing-large);\n    margin-right: unset;\n}\n\nhtml[dir=\"rtl\"] .toast-close-button {\n    left: var(--content-spacing-small);\n    right: unset;\n}\n\n");
+sheet.replaceSync(`.toast {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: none;
+    width: 100%;
+    min-height: 100px;
+    color: var(--color-utils-offwhite);
+    background-color: rgb(0 0 0 / 75%);
+    font-family: var(--font-family-default);
+    z-index: var(--index-important);
+    padding: var(--content-spacing-xlarge);
+}
+
+.toast:target,
+.toast.open {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.toast-close-button {
+    position: absolute;
+    top: var(--content-spacing-small);
+    right: var(--content-spacing-small);
+    width: var(--icon-size-small);
+    height: var(--icon-size-small);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toast-close-button-icon {
+    --animated-icon-width: 24px;
+    --animated-icon-background: transparent;
+    --animated-icon-color: var(--color-utils-offwhite);
+    --animated-icon-hover: var(--color-utils-white);
+}
+
+.toast-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    font-size: var(--font-size-medium);
+    text-transform: uppercase;
+    margin-bottom: var(--content-spacing-large);
+    width: 100%;
+}
+
+.toast-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.toast-description {
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    display: inline-block;
+    text-align: center;
+}
+
+.toast-description a {
+    color: var(--color-utils-offwhite);
+    transition: var(--transition-default);
+}
+
+.toast-description a:hover {
+    color: var(--color-utils-white);
+}
+
+.toast-actions {
+    display: flex;
+    margin: var(--content-spacing-large) 0;
+}
+
+.toast-actions .toast-actions-button {
+    padding: 0 var(--content-spacing-large);
+}
+
+.toast-actions .toast-actions-button:not(:last-child) {
+    margin-right: var(--content-spacing-large);
+}
+
+html[dir="rtl"] .toast-actions .toast-actions-button:not(:last-child) {
+    margin-left: var(--content-spacing-large);
+    margin-right: unset;
+}
+
+html[dir="rtl"] .toast-close-button {
+    left: var(--content-spacing-small);
+    right: unset;
+}
+
+`);
 export default sheet;

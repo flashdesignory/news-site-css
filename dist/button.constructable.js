@@ -1,3 +1,65 @@
 const sheet = new CSSStyleSheet();
-sheet.replaceSync(".button {\n    display: flex;\n    text-decoration: none;\n    align-items: center;\n    flex-direction: column;\n    justify-content: center;\n    cursor: pointer;\n    font-family: inherit;\n    font-size: inherit;\n    border-radius: var(--border-radius-small);\n    height: var(--nav-button-height);\n    padding: 0 var(--content-spacing-small);\n    transition-property: color, background-color, border-color;\n    transition-duration: 0.3s;\n    transition-timing-function: ease;\n}\n\n.primary-button {\n    border: 1px solid var(--color-utils-offwhite);\n    background-color: var(--color-utils-offwhite);\n    color: var(--color-utils-black);\n}\n\n.primary-button.dark {\n    border: 1px solid var(--color-utils-black);\n    background-color: var(--color-utils-black);\n    color: var(--color-utils-offwhite);\n}\n\n.primary-button:hover {\n    border-color: var(--color-utils-white);\n    background-color: var(--color-utils-white);\n    color: var(--color-utils-gray-light);\n}\n\n.primary-button.dark:hover {\n    border-color: var(--color-utils-gray-light);\n    background-color: var(--color-utils-gray-light);\n    color: var(--color-utils-offwhite);\n}\n\n.secondary-button {\n    border: 1px solid var(--color-utils-offwhite);\n    color: var(--color-utils-offwhite);\n    background-color: transparent;\n}\n\n.secondary-button.dark {\n    border: 1px solid var(--color-utils-black);\n    color: var(--color-utils-black);\n    background-color: transparent;\n}\n\n.secondary-button:hover {\n    border-color: var(--color-utils-white);\n    color: var(--color-utils-white);\n}\n\n.secondary-button.dark:hover {\n    border-color: var(--color-utils-gray-light);\n    color: var(--color-utils-gray-light);\n}\n");
+sheet.replaceSync(`.button {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    border-radius: var(--border-radius-small);
+    height: var(--nav-button-height);
+    padding: 0 var(--content-spacing-small);
+    transition-property: color, background-color, border-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+.primary-button {
+    border: 1px solid var(--color-utils-offwhite);
+    background-color: var(--color-utils-offwhite);
+    color: var(--color-utils-black);
+}
+
+.primary-button.dark {
+    border: 1px solid var(--color-utils-black);
+    background-color: var(--color-utils-black);
+    color: var(--color-utils-offwhite);
+}
+
+.primary-button:hover {
+    border-color: var(--color-utils-white);
+    background-color: var(--color-utils-white);
+    color: var(--color-utils-gray-light);
+}
+
+.primary-button.dark:hover {
+    border-color: var(--color-utils-gray-light);
+    background-color: var(--color-utils-gray-light);
+    color: var(--color-utils-offwhite);
+}
+
+.secondary-button {
+    border: 1px solid var(--color-utils-offwhite);
+    color: var(--color-utils-offwhite);
+    background-color: transparent;
+}
+
+.secondary-button.dark {
+    border: 1px solid var(--color-utils-black);
+    color: var(--color-utils-black);
+    background-color: transparent;
+}
+
+.secondary-button:hover {
+    border-color: var(--color-utils-white);
+    color: var(--color-utils-white);
+}
+
+.secondary-button.dark:hover {
+    border-color: var(--color-utils-gray-light);
+    color: var(--color-utils-gray-light);
+}
+`);
 export default sheet;

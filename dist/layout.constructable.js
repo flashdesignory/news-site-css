@@ -1,3 +1,145 @@
 const sheet = new CSSStyleSheet();
-sheet.replaceSync(".preview {\n    min-height: 100px;\n    background: orange;\n}\n\n.no-scroll {\n    position: fixed;\n}\n\n.page {\n    width: 100%;\n    min-width: 300px;\n    height: 100%;\n    overflow-x: hidden;\n    font-size: var(--font-size-medium);\n    font-family: var(--font-family-default);\n    background-color: var(--color-utils-white);\n    position: relative;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: flex-start;\n    overflow: auto;\n}\n\n.page-main {\n    min-width: 300px;\n    max-width: 1440px;\n    margin: 0 auto;\n    padding-top: var(--content-spacing-xlarge);\n    padding-left: var(--content-spacing-xlarge);\n    padding-right: var(--content-spacing-xlarge);\n    display: flex;\n    flex-direction: column;\n    width: 100%;\n    z-index: var(--index-content);\n\n        flex: 1;\n    background-color: var(--color-utils-white);\n    color: var(--color-utils-black);\n}\n\n.row {\n    display: flex;\n    flex-flow: row wrap;\n    justify-content: space-between;\n}\n\n.column {\n    display: flex;\n    flex-direction: column;\n    margin-bottom: var(--content-spacing-xlarge);\n    width: 100%;\n}\n\n.columns-1 {\n    width: 100%;\n}\n\n.columns-2-balanced {\n    width: calc(50% - ((var(--content-spacing-xlarge) * 2) / 3));\n}\n\n.columns-3-balanced {\n    width: calc(33.33% - ((var(--content-spacing-xlarge) * 2) / 3));\n}\n\n.columns-4-balanced {\n    width: calc(25% - ((var(--content-spacing-xlarge) * 2) / 3));\n}\n\n.columns-3-wide {\n    width: calc(50% - ((var(--content-spacing-xlarge) * 2) / 3));\n}\n\n.columns-3-narrow {\n    width: calc(25% - ((var(--content-spacing-xlarge) * 2) / 3));\n}\n\n.columns-wrap {\n    width: calc(33.33% - ((var(--content-spacing-xlarge) * 2) / 3));\n    flex-wrap: wrap;\n}\n\n.grid-container {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    column-gap: var(--content-spacing-xlarge);\n    row-gap: var(--content-spacing-xlarge);\n}\n\n.grid-container.grid-wrap {\n    grid-template-columns: 1fr 1fr 1fr;\n}\n\n.grid-item {\n    display: flex;\n    flex-direction: column;\n}\n\n.row-header {\n    font-size: var(--font-size-large);\n    font-weight: bold;\n    margin-bottom: var(--content-spacing-xlarge);\n    text-transform: uppercase;\n}\n\n@media (max-width: 767px) {\n    .columns-2-balanced,\n    .columns-3-balanced,\n    .columns-3-wide,\n    .columns-3-narrow,\n    .columns-wrap {\n        width: 100%;\n    }\n\n    .columns-3-wide {\n        order: 1;\n    }\n\n    .columns-3-narrow {\n        order: 2;\n    }\n\n    .columns-4-balanced {\n        width: calc(50% - (var(--content-spacing-xlarge) / 2));\n    }\n\n    .grid-container.grid-wrap {\n        grid-template-columns: 1fr;\n    }\n}\n\n@media (min-width: 768px) and (max-width: 1199px) {\n    .columns-wrap {\n        width: calc(50% - (var(--content-spacing-xlarge) / 2));\n    }\n\n    .grid-container.grid-wrap {\n        grid-template-columns: 1fr 1fr;\n    }\n}\n");
+sheet.replaceSync(`.preview {
+    min-height: 100px;
+    background: orange;
+}
+
+.no-scroll {
+    position: fixed;
+}
+
+.page {
+    width: 100%;
+    min-width: 300px;
+    height: 100%;
+    overflow-x: hidden;
+    font-size: var(--font-size-medium);
+    font-family: var(--font-family-default);
+    background-color: var(--color-utils-white);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: auto;
+}
+
+.page-main {
+    min-width: 300px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-top: var(--content-spacing-xlarge);
+    padding-left: var(--content-spacing-xlarge);
+    padding-right: var(--content-spacing-xlarge);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    z-index: var(--index-content);
+
+        flex: 1;
+    background-color: var(--color-utils-white);
+    color: var(--color-utils-black);
+}
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--content-spacing-xlarge);
+    width: 100%;
+}
+
+.columns-1 {
+    width: 100%;
+}
+
+.columns-2-balanced {
+    width: calc(50% - ((var(--content-spacing-xlarge) * 2) / 3));
+}
+
+.columns-3-balanced {
+    width: calc(33.33% - ((var(--content-spacing-xlarge) * 2) / 3));
+}
+
+.columns-4-balanced {
+    width: calc(25% - ((var(--content-spacing-xlarge) * 2) / 3));
+}
+
+.columns-3-wide {
+    width: calc(50% - ((var(--content-spacing-xlarge) * 2) / 3));
+}
+
+.columns-3-narrow {
+    width: calc(25% - ((var(--content-spacing-xlarge) * 2) / 3));
+}
+
+.columns-wrap {
+    width: calc(33.33% - ((var(--content-spacing-xlarge) * 2) / 3));
+    flex-wrap: wrap;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--content-spacing-xlarge);
+    row-gap: var(--content-spacing-xlarge);
+}
+
+.grid-container.grid-wrap {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.row-header {
+    font-size: var(--font-size-large);
+    font-weight: bold;
+    margin-bottom: var(--content-spacing-xlarge);
+    text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+    .columns-2-balanced,
+    .columns-3-balanced,
+    .columns-3-wide,
+    .columns-3-narrow,
+    .columns-wrap {
+        width: 100%;
+    }
+
+    .columns-3-wide {
+        order: 1;
+    }
+
+    .columns-3-narrow {
+        order: 2;
+    }
+
+    .columns-4-balanced {
+        width: calc(50% - (var(--content-spacing-xlarge) / 2));
+    }
+
+    .grid-container.grid-wrap {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .columns-wrap {
+        width: calc(50% - (var(--content-spacing-xlarge) / 2));
+    }
+
+    .grid-container.grid-wrap {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+`);
 export default sheet;

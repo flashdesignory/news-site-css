@@ -1,3 +1,77 @@
 const sheet = new CSSStyleSheet();
-sheet.replaceSync(".toggle-outer {\n    display: flex;\n    justify-content: space-between;\n    padding: var(--content-spacing-small);\n    border-radius: var(--border-radius-medium);\n    border: 2px solid var(--color-utils-gray-light);\n    color: var(--color-utils-black);\n    width: 100%;\n    height: 40px;\n    align-items: center;\n}\n\n.toggle-description {\n    margin-right: 16px;\n}\n\n.toggle-container {\n    display: flex;\n    justify-content: center;\n    flex-direction: column;\n    width: 42px;\n    height: 22px;\n    position: relative;\n}\n\n.toggle-container .label {\n    width: 42px;\n    height: 16px;\n    display: flex;\n    background-color: var(--color-utils-gray-lighter);\n    border-radius: 22px;\n    cursor: pointer;\n}\n\n.toggle-container .switch {\n    position: absolute;\n    left: 0;\n    top: 3px;\n    background-color: var(--color-utils-gray);\n    border-radius: 22px;\n    transition: var(--transition-default);\n    width: 45%;\n    height: 16px;\n    pointer-events: none;\n}\n\n.toggle-container .switch::before {\n    position: absolute;\n    content: \"\";\n    height: 22px;\n    width: 22px;\n    left: 0;\n    bottom: -3px;\n    background-color: var(--color-utils-red);\n    border-radius: var(--border-radius-50);\n    transition: var(--transition-default);\n}\n\n.toggle-container .label input[type=\"checkbox\"] {\n    width: 44px;\n    height: 16px;\n    z-index: -1;\n    position: absolute;\n    left: -6px;\n    top: 0;\n}\n\n.toggle-container .label input[type=\"checkbox\"]:checked + .switch::before {\n    transform: translateX(20px);\n}\n\n.toggle-container .label input[type=\"checkbox\"]:checked + .switch {\n    width: 100%;\n}\n");
+sheet.replaceSync(`.toggle-outer {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--content-spacing-small);
+    border-radius: var(--border-radius-medium);
+    border: 2px solid var(--color-utils-gray-light);
+    color: var(--color-utils-black);
+    width: 100%;
+    height: 40px;
+    align-items: center;
+}
+
+.toggle-description {
+    margin-right: 16px;
+}
+
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 42px;
+    height: 22px;
+    position: relative;
+}
+
+.toggle-container .label {
+    width: 42px;
+    height: 16px;
+    display: flex;
+    background-color: var(--color-utils-gray-lighter);
+    border-radius: 22px;
+    cursor: pointer;
+}
+
+.toggle-container .switch {
+    position: absolute;
+    left: 0;
+    top: 3px;
+    background-color: var(--color-utils-gray);
+    border-radius: 22px;
+    transition: var(--transition-default);
+    width: 45%;
+    height: 16px;
+    pointer-events: none;
+}
+
+.toggle-container .switch::before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 0;
+    bottom: -3px;
+    background-color: var(--color-utils-red);
+    border-radius: var(--border-radius-50);
+    transition: var(--transition-default);
+}
+
+.toggle-container .label input[type="checkbox"] {
+    width: 44px;
+    height: 16px;
+    z-index: -1;
+    position: absolute;
+    left: -6px;
+    top: 0;
+}
+
+.toggle-container .label input[type="checkbox"]:checked + .switch::before {
+    transform: translateX(20px);
+}
+
+.toggle-container .label input[type="checkbox"]:checked + .switch {
+    width: 100%;
+}
+`);
 export default sheet;

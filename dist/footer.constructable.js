@@ -1,3 +1,123 @@
 const sheet = new CSSStyleSheet();
-sheet.replaceSync(".page-footer {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    flex-shrink: 0;\n    width: 100%;\n    min-height: var(--footer-height);\n    padding: var(--content-spacing-small) 0;\n    font-size: var(--font-size-small);\n    background-color: var(--color-utils-black);\n    color: var(--color-utils-gray-lighter);\n}\n\n.footer-row {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    align-items: center;\n    min-width: 300px;\n    max-width: 1440px;\n    width: 100%;\n    min-height: var(--content-spacing-xxlarge);\n    padding-left: var(--content-spacing-xlarge);\n    padding-right: var(--content-spacing-xlarge);\n    position: relative;\n}\n\n.footer-row:not(:last-child) {\n    margin-bottom: var(--content-spacing-large);\n}\n\n.footer-column-left,\n.footer-column-center,\n.footer-column-right {\n    height: inherit;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n}\n\n.footer-column-left {\n    justify-content: flex-start;\n}\n\n.footer-column-right {\n    justify-content: flex-end;\n}\n\n.footer-column-center {\n    flex: 1;\n}\n\n.footer-links .footer-links-list {\n    list-style-type: none;\n    padding: 0;\n    margin: 0;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n}\n\n.footer-links .footer-links-item {\n    position: relative;\n}\n\n.footer-links .footer-links-item:not(:last-child) {\n    margin-right: var(--content-spacing-large);\n}\n\n.footer-links .footer-links-item a {\n    color: var(--color-utils-offwhite);\n    transition: fill 0.3s ease;\n    text-decoration: none;\n}\n\n.footer-links .footer-links-item a:hover {\n    color: var(--color-utils-white);\n}\n\n@media (max-width: 767px) {\n    .page-footer {\n        padding: var(--content-spacing-large) 0 0 0;\n    }\n\n    .footer-row {\n        flex-direction: column;\n    }\n\n    .footer-row:not(:last-child) {\n        margin-bottom: 0;\n    }\n\n    .footer-column-center,\n    .footer-column-left,\n    .footer-column-right {\n        padding-bottom: var(--content-spacing-large);\n        margin-bottom: var(--content-spacing-large);\n        border-bottom: 1px solid var(--color-utils-gray);\n        width: 100%;\n        justify-content: center;\n        line-height: 24px;\n    }\n\n    .footer-links .footer-links-list {\n        flex-direction: column;\n    }\n\n    .footer-links .footer-links-item:not(:last-child) {\n        margin-right: 0;\n        margin-bottom: var(--content-spacing-large);\n    }\n}\n\nhtml[dir=\"rtl\"] .footer-links .footer-links-item:not(:last-child) {\n    margin-left: var(--content-spacing-large);\n    margin-right: unset;\n}\n\n");
+sheet.replaceSync(`.page-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    min-height: var(--footer-height);
+    padding: var(--content-spacing-small) 0;
+    font-size: var(--font-size-small);
+    background-color: var(--color-utils-black);
+    color: var(--color-utils-gray-lighter);
+}
+
+.footer-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 300px;
+    max-width: 1440px;
+    width: 100%;
+    min-height: var(--content-spacing-xxlarge);
+    padding-left: var(--content-spacing-xlarge);
+    padding-right: var(--content-spacing-xlarge);
+    position: relative;
+}
+
+.footer-row:not(:last-child) {
+    margin-bottom: var(--content-spacing-large);
+}
+
+.footer-column-left,
+.footer-column-center,
+.footer-column-right {
+    height: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-column-left {
+    justify-content: flex-start;
+}
+
+.footer-column-right {
+    justify-content: flex-end;
+}
+
+.footer-column-center {
+    flex: 1;
+}
+
+.footer-links .footer-links-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer-links .footer-links-item {
+    position: relative;
+}
+
+.footer-links .footer-links-item:not(:last-child) {
+    margin-right: var(--content-spacing-large);
+}
+
+.footer-links .footer-links-item a {
+    color: var(--color-utils-offwhite);
+    transition: fill 0.3s ease;
+    text-decoration: none;
+}
+
+.footer-links .footer-links-item a:hover {
+    color: var(--color-utils-white);
+}
+
+@media (max-width: 767px) {
+    .page-footer {
+        padding: var(--content-spacing-large) 0 0 0;
+    }
+
+    .footer-row {
+        flex-direction: column;
+    }
+
+    .footer-row:not(:last-child) {
+        margin-bottom: 0;
+    }
+
+    .footer-column-center,
+    .footer-column-left,
+    .footer-column-right {
+        padding-bottom: var(--content-spacing-large);
+        margin-bottom: var(--content-spacing-large);
+        border-bottom: 1px solid var(--color-utils-gray);
+        width: 100%;
+        justify-content: center;
+        line-height: 24px;
+    }
+
+    .footer-links .footer-links-list {
+        flex-direction: column;
+    }
+
+    .footer-links .footer-links-item:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: var(--content-spacing-large);
+    }
+}
+
+html[dir="rtl"] .footer-links .footer-links-item:not(:last-child) {
+    margin-left: var(--content-spacing-large);
+    margin-right: unset;
+}
+
+`);
 export default sheet;

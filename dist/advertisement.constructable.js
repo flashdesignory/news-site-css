@@ -1,3 +1,91 @@
 const sheet = new CSSStyleSheet();
-sheet.replaceSync(".advertisement-container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: flex-start;\n    width: 100%;\n    flex-shrink: 0;\n    z-index: var(--index-advertisement);\n    overflow: hidden;\n}\n\n.advertisement-container-header {\n    background-color: var(--color-utils-black);\n    color: var(--color-utils-gray-lighter);\n}\n\n.advertisement-container-article {\n    margin-bottom: var(--content-spacing-xlarge);\n    color: var(--color-utils-gray-dark);\n}\n\n.advertisement-iframe {\n    display: flex;\n    margin: var(--content-spacing-xsmall) 0;\n    position: relative;\n    justify-content: center;\n}\n\n.advertisement-300x250 {\n    width: var(--article-advertising-width);\n    height: var(--article-advertising-height);\n}\n\n.advertisement-970x250 {\n    width: var(--header-advertising-width);\n    height: var(--header-advertising-height);\n}\n\n.advertisement-content {\n    display: flex;\n    position: relative;\n}\n\n.advertisement-notice {\n    display: flex;\n    justify-content: center;\n    font-size: var(--font-size-small);\n    width: var(--header-advertising-width);\n    height: var(--font-size-small);\n}\n\n.advertisement-icons {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    width: 31px;\n    height: 15px;\n    position: absolute;\n    right: 1px;\n    top: 1px;\n}\n\n.advertisement-icon {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 15px;\n    width: 15px;\n    z-index: var(--index-advertisement);\n    background-color: var(--theme-advertisement-icon-background);\n    position: relative;\n}\n\n.advertisement-icon svg {\n    position: absolute;\n    top: 0;\n    right: 0;\n    height: 15px;\n    width: 15px;\n    stroke: var(--theme-advertisement-icon-fill);\n    fill: var(--theme-advertisement-icon-fill);\n}\n\nhtml[dir=\"rtl\"] .advertisement-icons {\n    left: 1px;\n    right: unset;\n}\n\n");
+sheet.replaceSync(`.advertisement-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    flex-shrink: 0;
+    z-index: var(--index-advertisement);
+    overflow: hidden;
+}
+
+.advertisement-container-header {
+    background-color: var(--color-utils-black);
+    color: var(--color-utils-gray-lighter);
+}
+
+.advertisement-container-article {
+    margin-bottom: var(--content-spacing-xlarge);
+    color: var(--color-utils-gray-dark);
+}
+
+.advertisement-iframe {
+    display: flex;
+    margin: var(--content-spacing-xsmall) 0;
+    position: relative;
+    justify-content: center;
+}
+
+.advertisement-300x250 {
+    width: var(--article-advertising-width);
+    height: var(--article-advertising-height);
+}
+
+.advertisement-970x250 {
+    width: var(--header-advertising-width);
+    height: var(--header-advertising-height);
+}
+
+.advertisement-content {
+    display: flex;
+    position: relative;
+}
+
+.advertisement-notice {
+    display: flex;
+    justify-content: center;
+    font-size: var(--font-size-small);
+    width: var(--header-advertising-width);
+    height: var(--font-size-small);
+}
+
+.advertisement-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 31px;
+    height: 15px;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+}
+
+.advertisement-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15px;
+    width: 15px;
+    z-index: var(--index-advertisement);
+    background-color: var(--theme-advertisement-icon-background);
+    position: relative;
+}
+
+.advertisement-icon svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 15px;
+    width: 15px;
+    stroke: var(--theme-advertisement-icon-fill);
+    fill: var(--theme-advertisement-icon-fill);
+}
+
+html[dir="rtl"] .advertisement-icons {
+    left: 1px;
+    right: unset;
+}
+
+`);
 export default sheet;

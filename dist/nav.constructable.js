@@ -1,3 +1,85 @@
 const sheet = new CSSStyleSheet();
-sheet.replaceSync(".page-navigation {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    height: var(--nav-height);\n    position: sticky;\n    top: 0;\n    background-color: var(--color-utils-black);\n    z-index: var(--index-header);\n}\n\n.page-navigation-row {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    align-items: center;\n    min-width: 300px;\n    max-width: 1440px;\n    width: 100%;\n    height: inherit;\n    padding-left: var(--content-spacing-xlarge);\n    padding-right: var(--content-spacing-xlarge);\n    position: relative;\n}\n\n.page-navigation-column-left,\n.page-navigation-column-right {\n    height: inherit;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n}\n\n.page-navigation-logo {\n    display: flex;\n    width: var(--icon-size);\n    height: var(--icon-size);\n    z-index: var(--index-header-button);\n    cursor: pointer;\n}\n\n.page-navigation-logo svg path {\n    transition: var(--transition-default);\n    fill: var(--color-utils-offwhite);\n}\n\n.page-navigation-logo:hover svg path {\n    fill: var(--color-utils-white);\n}\n\n.page-navigation-button {\n    border: 1px solid var(--color-utils-offwhite);\n    color: var(--color-utils-offwhite);\n    border-radius: var(--border-radius-small);\n    height: var(--nav-button-height);\n    background-color: transparent;\n    transition: var(--transition-default);\n    cursor: pointer;\n}\n\n.page-navigation-button:hover {\n    color: var(--color-utils-white);\n}\n\n.nav-button {\n    z-index: var(--index-header-button);\n}\n\n@media (max-width: 767px) {\n    .page-navigation-logo {\n        margin-left: var(--content-spacing-small);\n    }\n\n        html[dir=\"rtl\"] .page-navigation-logo {\n        margin-right: var(--content-spacing-small);\n        margin-left: unset;\n    }\n\n    }\n");
+sheet.replaceSync(`.page-navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: var(--nav-height);
+    position: sticky;
+    top: 0;
+    background-color: var(--color-utils-black);
+    z-index: var(--index-header);
+}
+
+.page-navigation-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 300px;
+    max-width: 1440px;
+    width: 100%;
+    height: inherit;
+    padding-left: var(--content-spacing-xlarge);
+    padding-right: var(--content-spacing-xlarge);
+    position: relative;
+}
+
+.page-navigation-column-left,
+.page-navigation-column-right {
+    height: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-navigation-logo {
+    display: flex;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    z-index: var(--index-header-button);
+    cursor: pointer;
+}
+
+.page-navigation-logo svg path {
+    transition: var(--transition-default);
+    fill: var(--color-utils-offwhite);
+}
+
+.page-navigation-logo:hover svg path {
+    fill: var(--color-utils-white);
+}
+
+.page-navigation-button {
+    border: 1px solid var(--color-utils-offwhite);
+    color: var(--color-utils-offwhite);
+    border-radius: var(--border-radius-small);
+    height: var(--nav-button-height);
+    background-color: transparent;
+    transition: var(--transition-default);
+    cursor: pointer;
+}
+
+.page-navigation-button:hover {
+    color: var(--color-utils-white);
+}
+
+.nav-button {
+    z-index: var(--index-header-button);
+}
+
+@media (max-width: 767px) {
+    .page-navigation-logo {
+        margin-left: var(--content-spacing-small);
+    }
+
+        html[dir="rtl"] .page-navigation-logo {
+        margin-right: var(--content-spacing-small);
+        margin-left: unset;
+    }
+
+    }
+`);
 export default sheet;

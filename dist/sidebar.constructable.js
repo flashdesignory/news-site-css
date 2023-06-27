@@ -1,3 +1,122 @@
 const sheet = new CSSStyleSheet();
-sheet.replaceSync(".sidebar {\n    position: fixed;\n    max-width: 300px;\n    width: 100%;\n    height: 100%;\n    top: 0;\n    left: 0;\n    background-color: var(--color-utils-white);\n    z-index: var(--index-important);\n    border-top-right-radius: var(--border-radius-medium);\n    border-bottom-right-radius: var(--border-radius-medium);\n    box-shadow: 0 10px 18px var(--color-utils-gray);\n    display: none;\n    font-family: var(--font-family-default);\n    color: var(--color-utils-black);\n}\n\n.sidebar:target,\n.sidebar.open {\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-start;\n    align-items: center;\n    padding: var(--content-spacing-xlarge);\n}\n\n.sidebar-close-button {\n    position: absolute;\n    top: var(--content-spacing-medium);\n    right: var(--content-spacing-medium);\n    width: var(--icon-size-small);\n    height: var(--icon-size-small);\n    display: flex;\n}\n\n.sidebar-close-button-icon {\n    --animated-icon-width: 24px;\n    --animated-icon-background: transparent;\n    --animated-icon-color: var(--color-utils-black);\n    --animated-icon-hover: var(--color-utils-gray-light);\n}\n\n.sidebar-header {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    font-weight: bold;\n    font-size: var(--font-size-medium);\n    text-transform: uppercase;\n    margin-bottom: var(--content-spacing-large);\n    width: 100%;\n}\n\n.sidebar-body {\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    width: 100%;\n    overflow-y: auto;\n}\n\n.sidebar-group {\n    width: 100%;\n}\n\n.sidebar-group:not(:last-child) {\n    margin-bottom: var(--content-spacing-medium);\n    padding-bottom: var(--content-spacing-medium);\n    border-bottom: 1px solid var(--color-utils-offwhite);\n}\n\n.sidebar-list {\n    list-style: none;\n}\n\n.sidebar-list-item {\n    width: 100%;\n    margin-top: var(--content-spacing-small);\n}\n\n.sidebar-list-item a {\n    width: 100%;\n    display: flex;\n    padding: var(--content-spacing-xsmall) var(--content-spacing-medium);\n    text-decoration: none;\n    color: var(--color-utils-black);\n    transition: var(--transition-default);\n}\n\n.sidebar-list-item a:hover,\n.sidebar-list-item a:focus {\n    background-color: var(--color-utils-offwhite);\n}\n\n.sidebar summary {\n    cursor: pointer;\n}\n\n@media (max-width: 419px) {\n    .sidebar {\n        max-width: unset;\n        border-radius: 0;\n    }\n}\n\nhtml[dir=\"rtl\"] .sidebar {\n    right: 0;\n    left: unset;\n    border-top-left-radius: var(--border-radius-medium);\n    border-top-right-radius: unset;\n    border-bottom-left-radius: var(--border-radius-medium);\n    border-bottom-right-radius: unset;\n}\n\nhtml[dir=\"rtl\"] .sidebar-close-button {\n    left: var(--content-spacing-medium);\n    right: unset;\n}\n\n");
+sheet.replaceSync(`.sidebar {
+    position: fixed;
+    max-width: 300px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--color-utils-white);
+    z-index: var(--index-important);
+    border-top-right-radius: var(--border-radius-medium);
+    border-bottom-right-radius: var(--border-radius-medium);
+    box-shadow: 0 10px 18px var(--color-utils-gray);
+    display: none;
+    font-family: var(--font-family-default);
+    color: var(--color-utils-black);
+}
+
+.sidebar:target,
+.sidebar.open {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: var(--content-spacing-xlarge);
+}
+
+.sidebar-close-button {
+    position: absolute;
+    top: var(--content-spacing-medium);
+    right: var(--content-spacing-medium);
+    width: var(--icon-size-small);
+    height: var(--icon-size-small);
+    display: flex;
+}
+
+.sidebar-close-button-icon {
+    --animated-icon-width: 24px;
+    --animated-icon-background: transparent;
+    --animated-icon-color: var(--color-utils-black);
+    --animated-icon-hover: var(--color-utils-gray-light);
+}
+
+.sidebar-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    font-size: var(--font-size-medium);
+    text-transform: uppercase;
+    margin-bottom: var(--content-spacing-large);
+    width: 100%;
+}
+
+.sidebar-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.sidebar-group {
+    width: 100%;
+}
+
+.sidebar-group:not(:last-child) {
+    margin-bottom: var(--content-spacing-medium);
+    padding-bottom: var(--content-spacing-medium);
+    border-bottom: 1px solid var(--color-utils-offwhite);
+}
+
+.sidebar-list {
+    list-style: none;
+}
+
+.sidebar-list-item {
+    width: 100%;
+    margin-top: var(--content-spacing-small);
+}
+
+.sidebar-list-item a {
+    width: 100%;
+    display: flex;
+    padding: var(--content-spacing-xsmall) var(--content-spacing-medium);
+    text-decoration: none;
+    color: var(--color-utils-black);
+    transition: var(--transition-default);
+}
+
+.sidebar-list-item a:hover,
+.sidebar-list-item a:focus {
+    background-color: var(--color-utils-offwhite);
+}
+
+.sidebar summary {
+    cursor: pointer;
+}
+
+@media (max-width: 419px) {
+    .sidebar {
+        max-width: unset;
+        border-radius: 0;
+    }
+}
+
+html[dir="rtl"] .sidebar {
+    right: 0;
+    left: unset;
+    border-top-left-radius: var(--border-radius-medium);
+    border-top-right-radius: unset;
+    border-bottom-left-radius: var(--border-radius-medium);
+    border-bottom-right-radius: unset;
+}
+
+html[dir="rtl"] .sidebar-close-button {
+    left: var(--content-spacing-medium);
+    right: unset;
+}
+
+`);
 export default sheet;
