@@ -15,7 +15,7 @@ sheet.replaceSync(`.preview {
     overflow-x: hidden;
     font-size: var(--font-size-medium);
     font-family: var(--font-family-default);
-    background-color: var(--color-utils-white);
+    background-color: var(--theme-ui-background);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -37,8 +37,8 @@ sheet.replaceSync(`.preview {
     z-index: var(--index-content);
 
         flex: 1;
-    background-color: var(--color-utils-white);
-    color: var(--color-utils-black);
+    background-color: var(--theme-ui-background);
+    color: var(--theme-text-dark);
 }
 
 .row {

@@ -5,8 +5,8 @@ sheet.replaceSync(`.modal {
     height: 100%;
     top: 0;
     left: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: var(--index-important);
+    background-color: var(--theme-modal-background);
+    z-index: var(--index-important);
     display: none;
 }
 
@@ -27,11 +27,11 @@ sheet.replaceSync(`.modal {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: var(--color-utils-white);
+    background-color: var(--theme-dialog-background);
     border-radius: var(--border-radius-medium);
     box-shadow: 0 10px 18px var(--color-utils-gray);
     font-family: var(--font-family-default);
-    color: var(--color-utils-black);
+    color: var(--theme-text-dark);
     padding: var(--content-spacing-xlarge);
 }
 
@@ -49,8 +49,8 @@ sheet.replaceSync(`.modal {
 .modal-close-button-icon {
     --animated-icon-width: 24px;
     --animated-icon-background: transparent;
-    --animated-icon-color: var(--color-utils-black);
-    --animated-icon-hover: var(--color-utils-gray-light);
+    --animated-icon-color: var(--theme-icon-fill-dark);
+    --animated-icon-hover: var(--theme-icon-fill-medium);
 }
 
 .modal-header {
@@ -100,5 +100,12 @@ html[dir="rtl"] .modal-close-button {
     right: unset;
 }
 
+
+@media (forced-colors: active) {
+    .modal-close-button-icon {
+        --animated-icon-color: var(--high-contrast-icon-fill-dark, var(--color-system-linktext));
+        --animated-icon-hover: var(--high-contrast-icon-fill-medium, var(--color-system-linktext));
+    }
+}
 `);
 export default sheet;

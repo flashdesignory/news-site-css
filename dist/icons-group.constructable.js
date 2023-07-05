@@ -23,25 +23,31 @@ sheet.replaceSync(`.icons-group {
 .icons-group .icons-group-item button {
     cursor: pointer;
     display: flex;
-    width: var(--icon-size-small);
-    height: var(--icon-size-small);
+    border-width: 0;
 }
 
 .group-icon {
     display: flex;
+    position: relative;
+}
+
+.group-icon-small {
     width: var(--icon-size-small);
     height: var(--icon-size-small);
-    position: relative;
-    background-color: var(--color-utils-black);
+}
+
+.group-icon-medium {
+    width: var(--icon-size);
+    height: var(--icon-size);
 }
 
 .group-icon svg path {
-    fill: var(--color-utils-offwhite);
+    fill: var(--theme-icon-fill-light);
     transition: fill 0.3s ease;
 }
 
 .icons-group li:hover .group-icon svg path {
-    fill: var(--color-utils-white);
+    fill: var(--theme-icon-fill-lighter);
 }
 
 html[dir="rtl"] .icons-group .icons-group-item:not(:last-child) {
@@ -49,5 +55,15 @@ html[dir="rtl"] .icons-group .icons-group-item:not(:last-child) {
     margin-right: unset;
 }
 
+
+@media (forced-colors: active) {
+    .group-icon svg path {
+        fill: var(--high-contrast-icon-fill-light, var(--color-system-linktext));
+    }
+
+    .icons-group li:hover .group-icon svg path {
+        fill: var(--high-contrast-icon-fill-light, var(--color-system-linktext));
+    }
+}
 `);
 export default sheet;

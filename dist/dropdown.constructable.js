@@ -20,8 +20,8 @@ sheet.replaceSync(`.dropdown {
 }
 
 .dropdown-label {
-    background-color: var(--color-utils-black);
-    color: var(--color-utils-offwhite);
+    background-color: var(--theme-ui-foreground);
+    color: var(--theme-button-color-light);
     height: var(--nav-button-height);
     cursor: pointer;
     display: flex;
@@ -37,8 +37,9 @@ sheet.replaceSync(`.dropdown {
 }
 
 .dropdown-label:hover {
-    color: var(--color-utils-white);
-    background-color: var(--color-utils-gray-dark);
+    color: var(--theme-button-color-lighter);
+    background-color: var(--theme-button-color-medium);
+    text-decoration: var(--theme-text-decoration);
 }
 
 .dropdown-label-text {
@@ -62,7 +63,7 @@ sheet.replaceSync(`.dropdown {
     top: 100%;
     left: calc(var(--content-spacing-small) * -1);
     min-width: 200px;
-    background-color: var(--color-utils-black);
+    background-color: var(--theme-ui-foreground);
     z-index: var(--index-dropdown);
     box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%);
 }
@@ -79,7 +80,7 @@ html[dir="rtl"] .dropdown-content {
 }
 
 .dropdown:hover .dropdown-button {
-    color: var(--color-utils-white);
+    color: var(--theme-button-color-lighter);
 }
 
 @media (max-width: 767px) {
@@ -112,5 +113,15 @@ html[dir="rtl"] .dropdown-label-text {
     margin-right: unset;
 }
 
+
+@media (forced-colors: active) {
+    .dropdown-label-text {
+        color: var(--high-contrast-button-color-light, var(--color-system-linktext));
+    }
+
+    .dropdown-label:hover {
+        text-decoration: var(--high-contrast-text-decoration);
+    }
+}
 `);
 export default sheet;

@@ -11,7 +11,7 @@ sheet.replaceSync(`.advertisement-container {
 }
 
 .advertisement-container-header {
-    background-color: var(--color-utils-black);
+    background-color: var(--theme-ui-foreground);
     color: var(--color-utils-gray-lighter);
 }
 

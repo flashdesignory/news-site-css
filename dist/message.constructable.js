@@ -3,11 +3,21 @@ sheet.replaceSync(`.message {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: var(--color-utils-red);
-    color: var(--color-utils-white);
+    background-color: var(--theme-message-background);
+    color: var(--theme-text-lighter);
     font-family: var(--font-family-default);
     padding: var(--content-spacing-large);
     position: relative;
+}
+
+.message::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - (var(--content-spacing-xlarge) * 2));
+    margin: auto;
+    border-bottom: var(--theme-small-border);
 }
 
 .message:target,
@@ -34,8 +44,8 @@ sheet.replaceSync(`.message {
 .message-close-button-icon {
     --animated-icon-width: 24px;
     --animated-icon-background: transparent;
-    --animated-icon-color: var(--color-utils-offwhite);
-    --animated-icon-hover: var(--color-utils-white);
+    --animated-icon-color: var(--theme-icon-fill-light);
+    --animated-icon-hover: var(--theme-icon-fill-lighter);
 }
 
 .message-header {
@@ -64,10 +74,22 @@ sheet.replaceSync(`.message {
     text-align: center;
 }
 
+/** RTL MESSAGE START **/
 html[dir="rtl"] .message-close-button {
     left: var(--content-spacing-small);
     right: unset;
 }
 
+
+@media (forced-colors: active) {
+    .message::after {
+        border-bottom: var(--high-contrast-small-border);
+    }
+
+    .message-close-button-icon {
+        --animated-icon-color: var(--high-contrast-icon-fill-light, var(--color-system-linktext));
+        --animated-icon-hover: var(--high-contrast-icon-fill-lighter, var(--color-system-linktext));
+    }
+}
 `);
 export default sheet;

@@ -6,21 +6,21 @@ sheet.replaceSync(`.sitemap {
 }
 
 .sitemap a {
-    color: var(--color-utils-offwhite);
+    color: var(--theme-button-color-light);
     transition: var(--transition-default);
     font-size: 14px;
     text-decoration: none;
 }
 
 .sitemap a:hover {
-    color: var(--color-utils-white);
+    color: var(--theme-button-color-lighter);
     text-decoration: underline;
 }
 
 .sitemap a.active,
 .sitemap a.active:hover {
-    color: var(--color-utils-red-light);
-    text-decoration: none;
+    color: var(--theme-text-highlight);
+    text-decoration: var(--theme-text-decoration);
 }
 
 .sitemap-list {
@@ -61,6 +61,13 @@ sheet.replaceSync(`.sitemap {
 @media (min-width: 768px) and (max-width: 1199px) {
     .sitemap-item {
         width: calc(100% / 4);
+    }
+}
+
+@media (forced-colors: active) {
+    .sitemap a.active,
+    .sitemap a.active:hover {
+        text-decoration: var(--high-contrast-text-decoration);
     }
 }
 `);

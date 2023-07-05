@@ -8,14 +8,15 @@ sheet.replaceSync(`.dialog {
     bottom: 40px;
     left: 40px;
     right: unset;
-    background-color: var(--color-utils-white);
+    background-color: var(--theme-dialog-background);
     z-index: var(--index-important);
     border-radius: var(--border-radius-medium);
     box-shadow: 0 10px 18px var(--color-utils-gray);
     display: none;
     font-family: var(--font-family-default);
-    color: var(--color-utils-black);
+    color: var(--theme-text-dark);
     padding: var(--content-spacing-xlarge);
+    border: var(--theme-medium-border);
 }
 
 .dialog:target,
@@ -40,8 +41,8 @@ sheet.replaceSync(`.dialog {
 .dialog-close-button-icon {
     --animated-icon-width: 24px;
     --animated-icon-background: transparent;
-    --animated-icon-color: var(--color-utils-black);
-    --animated-icon-hover: var(--color-utils-gray-light);
+    --animated-icon-color: var(--theme-icon-fill-dark);
+    --animated-icon-hover: var(--theme-icon-fill-medium);
 }
 
 .dialog-header {
@@ -73,6 +74,15 @@ sheet.replaceSync(`.dialog {
     margin-bottom: var(--content-spacing-large);
 }
 
+@media (max-width: 767px) {
+    .dialog {
+        width: calc(100% - var(--content-spacing-xxxlarge) * 2);
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+}
+
 html[dir="rtl"] .dialog {
     right: 40px;
     left: unset;
@@ -84,17 +94,14 @@ html[dir="rtl"] .dialog-close-button {
 }
 
 
-@media (max-width: 767px) {
+@media (forced-colors: active) {
     .dialog {
-        width: calc(100% - var(--content-spacing-xxxlarge) * 2);
-        left: 0;
-        right: 0;
-        margin: 0 auto;
+        border: var(--high-contrast-medium-border);
     }
 
-        html[dir="rtl"] .dialog {
-        left: 0;
-        right: 0;
+    .dialog-close-button-icon {
+        --animated-icon-color: var(--high-contrast-icon-fill-dark, var(--color-system-linktext));
+        --animated-icon-hover: var(--high-contrast-icon-fill-medium, var(--color-system-linktext));
     }
 }
 `);

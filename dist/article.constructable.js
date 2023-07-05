@@ -19,7 +19,7 @@ sheet.replaceSync(`.article-header {
 }
 
 .article-header::before {
-    background-color: var(--color-utils-red);
+    background-color: var(--theme-link-highlight);
     width: var(--content-spacing-large);
     height: 4px;
     transition: var(--transition-default);
@@ -39,7 +39,7 @@ sheet.replaceSync(`.article-header {
 .article-header a {
     display: flex;
     text-decoration: none;
-    color: var(--color-utils-black);
+    color: var(--theme-text-dark);
     pointer-events: auto;
 }
 /* stylelint-enable */
@@ -53,13 +53,13 @@ sheet.replaceSync(`.article-header {
 /* stylelint-disable */
 .article-body a {
     text-decoration: none;
-    color: var(--color-utils-black);
+    color: var(--theme-link-color);
     transition: var(--transition-default);
     display: flex;
 }
 
 .article-body a:hover {
-    color: var(--color-utils-gray-light);
+    color: var(--theme-link-hover);
     text-decoration: underline;
 }
 /* stylelint-enable */
@@ -101,18 +101,19 @@ sheet.replaceSync(`.article-header {
     left: 0;
     bottom: 0;
     font-size: var(--font-size-small);
-    background-color: var(--color-utils-gray);
-    color: var(--color-utils-white);
+    background-color: var(--theme-tag-background-gray);
+    color: var(--theme-text-lighter);
     padding: var(--content-spacing-xsmall) var(--content-spacing-small);
     text-transform: uppercase;
+    border: var(--theme-small-border);
 }
 
 .article-image-tag.breaking {
-    background-color: var(--color-utils-red);
+    background-color: var(--theme-tag-background-red);
 }
 
 .article-image-tag.watch {
-    background-color: var(--color-utils-gray);
+    background-color: var(--theme-tag-background-gray);
 }
 
 .article-image-tag svg {
@@ -123,7 +124,7 @@ sheet.replaceSync(`.article-header {
 
 /* stylelint-disable */
 .article-image-tag svg path {
-    fill: var(--color-utils-white);
+    fill: var(--theme-icon-fill-light);
 }
 /* stylelint-enable */
 
@@ -246,5 +247,15 @@ html[dir="rtl"] .article-image-tag svg {
     margin-right: unset;
 }
 
+
+@media (forced-colors: active) {
+    .article-image-tag {
+        border: var(--high-contrast-small-border);
+    }
+
+    .article-image-tag svg path {
+        fill: var(--high-contrast-icon-fill-light, var(--color-system-linktext));
+    }
+}
 `);
 export default sheet;

@@ -6,14 +6,14 @@ sheet.replaceSync(`.sidebar {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: var(--color-utils-white);
+    background-color: var(--theme-dialog-background);
     z-index: var(--index-important);
     border-top-right-radius: var(--border-radius-medium);
     border-bottom-right-radius: var(--border-radius-medium);
     box-shadow: 0 10px 18px var(--color-utils-gray);
     display: none;
     font-family: var(--font-family-default);
-    color: var(--color-utils-black);
+    color: var(--theme-text-dark);
 }
 
 .sidebar:target,
@@ -37,8 +37,8 @@ sheet.replaceSync(`.sidebar {
 .sidebar-close-button-icon {
     --animated-icon-width: 24px;
     --animated-icon-background: transparent;
-    --animated-icon-color: var(--color-utils-black);
-    --animated-icon-hover: var(--color-utils-gray-light);
+    --animated-icon-color: var(--theme-icon-fill-dark);
+    --animated-icon-hover: var(--theme-icon-fill-medium);
 }
 
 .sidebar-header {
@@ -84,13 +84,13 @@ sheet.replaceSync(`.sidebar {
     display: flex;
     padding: var(--content-spacing-xsmall) var(--content-spacing-medium);
     text-decoration: none;
-    color: var(--color-utils-black);
+    color: var(--theme-text-dark);
     transition: var(--transition-default);
 }
 
 .sidebar-list-item a:hover,
 .sidebar-list-item a:focus {
-    background-color: var(--color-utils-offwhite);
+    background-color: var(--theme-button-color-light);
 }
 
 .sidebar summary {
@@ -118,5 +118,12 @@ html[dir="rtl"] .sidebar-close-button {
     right: unset;
 }
 
+
+@media (forced-colors: active) {
+    .sidebar-close-button-icon {
+        --animated-icon-color: var(--high-contrast-icon-fill-dark, var(--color-system-linktext));
+        --animated-icon-hover: var(--high-contrast-icon-fill-medium, var(--color-system-linktext));
+    }
+}
 `);
 export default sheet;
