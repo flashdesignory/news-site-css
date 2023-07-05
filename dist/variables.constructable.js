@@ -129,8 +129,9 @@ sheet.replaceSync(`:root {
     --high-contrast-icon-fill-dark: LinkText;
     --high-contrast-button-color-lighter: LinkText;
     --high-contrast-button-color-light: LinkText;
-    --high-contrast-button-color-medium: LinkFace;
-    --high-contrast-button-color-dark: LinkFace;
+    --high-contrast-button-color-medium: Canvas;
+    --high-contrast-button-color-dark: Canvas;
+    --high-contrast-color-active: Canvas;
     }
 
 :root.forced-colors {
@@ -166,7 +167,7 @@ sheet.replaceSync(`:root {
     --theme-button-color-lighter: var(--color-system-linktext);
     --theme-button-color-light: var(--color-system-linktext);
     --theme-button-color-medium: var(--color-system-canvas);
-    --theme-button-color-dark: var(--color-system-linkface);
+    --theme-button-color-dark: var(--color-system-canvas);
     --theme-button-color-active: var(--color-system-canvas);
 }
 `);

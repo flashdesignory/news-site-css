@@ -14,6 +14,7 @@ sheet.replaceSync(`.sidebar {
     display: none;
     font-family: var(--font-family-default);
     color: var(--theme-text-dark);
+    border-right: var(--theme-medium-border);
 }
 
 .sidebar:target,
@@ -111,6 +112,8 @@ html[dir="rtl"] .sidebar {
     border-top-right-radius: unset;
     border-bottom-left-radius: var(--border-radius-medium);
     border-bottom-right-radius: unset;
+    border-left: var(--theme-medium-border);
+    border-right: none;
 }
 
 html[dir="rtl"] .sidebar-close-button {
@@ -120,6 +123,15 @@ html[dir="rtl"] .sidebar-close-button {
 
 
 @media (forced-colors: active) {
+    .sidebar {
+        border-right: var(--high-contrast-medium-border);
+    }
+
+    html[dir="rtl"] .sidebar {
+        border-left: var(--high-contrast-medium-border);
+        border-right: none;
+    }
+
     .sidebar-close-button-icon {
         --animated-icon-color: var(--high-contrast-icon-fill-dark, var(--color-system-linktext));
         --animated-icon-hover: var(--high-contrast-icon-fill-medium, var(--color-system-linktext));

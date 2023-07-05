@@ -33,6 +33,7 @@ sheet.replaceSync(`.modal {
     font-family: var(--font-family-default);
     color: var(--theme-text-dark);
     padding: var(--content-spacing-xlarge);
+    border: var(--theme-medium-border);
 }
 
 .modal-close-button {
@@ -102,6 +103,10 @@ html[dir="rtl"] .modal-close-button {
 
 
 @media (forced-colors: active) {
+    .modal {
+        border: var(--high-contrast-medium-border);
+    }
+
     .modal-close-button-icon {
         --animated-icon-color: var(--high-contrast-icon-fill-dark, var(--color-system-linktext));
         --animated-icon-hover: var(--high-contrast-icon-fill-medium, var(--color-system-linktext));

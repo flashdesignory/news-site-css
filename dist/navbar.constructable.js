@@ -230,6 +230,10 @@ html[dir="rtl"] .navbar-dropdown-item:not(:last-child) {
     .navbar-item a.active {
         border: var(--high-contrast-small-border);
     }
+
+    .navbar-active-path {
+        background-color: var(--high-contrast-button-color-active);
+    }
 }
 `);
 export default sheet;

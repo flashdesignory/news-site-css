@@ -138,8 +138,9 @@
     --high-contrast-icon-fill-dark: LinkText;
     --high-contrast-button-color-lighter: LinkText;
     --high-contrast-button-color-light: LinkText;
-    --high-contrast-button-color-medium: LinkFace;
-    --high-contrast-button-color-dark: LinkFace;
+    --high-contrast-button-color-medium: Canvas;
+    --high-contrast-button-color-dark: Canvas;
+    --high-contrast-color-active: Canvas;
     /* stylelint enable */
 }
 
@@ -177,7 +178,7 @@
     --theme-button-color-lighter: var(--color-system-linktext);
     --theme-button-color-light: var(--color-system-linktext);
     --theme-button-color-medium: var(--color-system-canvas);
-    --theme-button-color-dark: var(--color-system-linkface);
+    --theme-button-color-dark: var(--color-system-canvas);
     --theme-button-color-active: var(--color-system-canvas);
 }
 /* reset */
@@ -1494,6 +1495,10 @@ html[dir="rtl"] .navbar-dropdown-item:not(:last-child) {
     .navbar-item a.active {
         border: var(--high-contrast-small-border);
     }
+
+    .navbar-active-path {
+        background-color: var(--high-contrast-button-color-active);
+    }
 }
 .page-footer {
     display: flex;
@@ -2553,6 +2558,7 @@ html[dir="rtl"] .message-close-button {
     display: none;
     font-family: var(--font-family-default);
     color: var(--theme-text-dark);
+    border-right: var(--theme-medium-border);
 }
 
 .sidebar:target,
@@ -2651,6 +2657,8 @@ html[dir="rtl"] .sidebar {
     border-top-right-radius: unset;
     border-bottom-left-radius: var(--border-radius-medium);
     border-bottom-right-radius: unset;
+    border-left: var(--theme-medium-border);
+    border-right: none;
 }
 
 html[dir="rtl"] .sidebar-close-button {
@@ -2662,6 +2670,15 @@ html[dir="rtl"] .sidebar-close-button {
 
 /* High Contrast / Forced-Colors: */
 @media (forced-colors: active) {
+    .sidebar {
+        border-right: var(--high-contrast-medium-border);
+    }
+
+    html[dir="rtl"] .sidebar {
+        border-left: var(--high-contrast-medium-border);
+        border-right: none;
+    }
+
     .sidebar-close-button-icon {
         --animated-icon-color: var(--high-contrast-icon-fill-dark, var(--color-system-linktext));
         --animated-icon-hover: var(--high-contrast-icon-fill-medium, var(--color-system-linktext));
@@ -2701,6 +2718,7 @@ html[dir="rtl"] .sidebar-close-button {
     font-family: var(--font-family-default);
     color: var(--theme-text-dark);
     padding: var(--content-spacing-xlarge);
+    border: var(--theme-medium-border);
 }
 
 .modal-close-button {
@@ -2773,6 +2791,10 @@ html[dir="rtl"] .modal-close-button {
 
 /* High Contrast / Forced-Colors: */
 @media (forced-colors: active) {
+    .modal {
+        border: var(--high-contrast-medium-border);
+    }
+
     .modal-close-button-icon {
         --animated-icon-color: var(--high-contrast-icon-fill-dark, var(--color-system-linktext));
         --animated-icon-hover: var(--high-contrast-icon-fill-medium, var(--color-system-linktext));
