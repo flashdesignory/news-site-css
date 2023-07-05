@@ -81,15 +81,13 @@ sheet.replaceSync(`.input-container {
 @media (forced-colors: active) {
     .input-container .input[type="submit"] {
         border-color: var(--high-contrast-button-light-background);
-        background-color: var(--high-contrast-button-light-background);
-        color: var(--high-contrast-button-light-text);
+        color: var(--high-contrast-button-light-background);
     }
     
     .input-container .input[type="submit"]:hover,
     .input-container .input[type="submit"]:focus {
         border-color: var(--high-contrast-button-light-background-hover);
-        background-color: var(--high-contrast-button-light-background-hover);
-        color: var(--high-contrast-button-light-text-hover);
+        color: var(--high-contrast-button-light-background-hover);
     }
 }`);
 export default sheet;

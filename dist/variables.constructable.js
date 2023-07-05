@@ -139,7 +139,6 @@ sheet.replaceSync(`:root {
     --high-contrast-icon-fill-light: LinkText;
     --high-contrast-icon-fill-medium: LinkText;
     --high-contrast-icon-fill-dark: LinkText;
-
     --high-contrast-button-light-text: Canvas;
     --high-contrast-button-light-text-hover: Canvas;
     --high-contrast-button-light-background: LinkText;
@@ -148,7 +147,6 @@ sheet.replaceSync(`:root {
     --high-contrast-button-dark-text-hover: Canvas;
     --high-contrast-button-dark-background: LinkText;
     --high-contrast-button-dark-background-hover: LinkText;
-
     --high-contrast-navigation-text: LinkText;
     --high-contrast-navigation-text-hover: LinkText;
     --high-contrast-navigation-background: transparent;
