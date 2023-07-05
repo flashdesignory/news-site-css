@@ -92,6 +92,7 @@ sheet.replaceSync(`.sidebar {
 .sidebar-list-item a:hover,
 .sidebar-list-item a:focus {
     background-color: var(--theme-link-background);
+    text-decoration: var(--theme-text-decoration);
 }
 
 .sidebar summary {
@@ -140,6 +141,7 @@ html[dir="rtl"] .sidebar-close-button {
     .sidebar-list-item a:hover,
     .sidebar-list-item a:focus {
         background-color: var(--high-contrast-link-background);
+        text-decoration: var(--high-contrast-text-decoration);
     }
 }
 `);
