@@ -104,22 +104,14 @@ sheet.replaceSync(`:root {
     --theme-icon-fill-light: var(--color-utils-offwhite);
     --theme-icon-fill-medium: var(--color-utils-gray-light);
     --theme-icon-fill-dark: var(--color-utils-black);
-    
-    --theme-button-color-lighter: var(--color-utils-white);
-    --theme-button-color-light: var(--color-utils-offwhite);
-    --theme-button-color-medium: var(--color-utils-gray-light);
-    --theme-button-color-dark: var(--color-utils-black);
-
     --theme-button-light-text: var(--color-utils-black);
     --theme-button-light-text-hover: var(--color-utils-gray-light);
     --theme-button-light-background: var(--color-utils-offwhite);
     --theme-button-light-background-hover: var(--color-utils-white);
-
     --theme-button-dark-text: var(--color-utils-offwhite);
     --theme-button-dark-text-hover: var(--color-utils-white);
     --theme-button-dark-background: var(--color-utils-black);
     --theme-button-dark-background-hover: var(--color-utils-gray-light);
-
     --theme-navigation-text: var(--color-utils-offwhite);
     --theme-navigation-text-hover: var(--color-utils-white);
     --theme-navigation-background: transparent;
@@ -147,11 +139,15 @@ sheet.replaceSync(`:root {
     --high-contrast-icon-fill-light: LinkText;
     --high-contrast-icon-fill-medium: LinkText;
     --high-contrast-icon-fill-dark: LinkText;
-    --high-contrast-button-color-lighter: LinkText;
-    --high-contrast-button-color-light: LinkText;
-    --high-contrast-button-color-medium: Canvas;
-    --high-contrast-button-color-dark: Canvas;
-    --high-contrast-color-active: Canvas;
+
+    --high-contrast-button-light-text: Canvas;
+    --high-contrast-button-light-text-hover: Canvas;
+    --high-contrast-button-light-background: LinkText;
+    --high-contrast-button-light-background-hover: LinkText;
+    --high-contrast-button-dark-text: Canvas;
+    --high-contrast-button-dark-text-hover: Canvas;
+    --high-contrast-button-dark-background: LinkText;
+    --high-contrast-button-dark-background-hover: LinkText;
 
     --high-contrast-navigation-text: LinkText;
     --high-contrast-navigation-text-hover: LinkText;
@@ -191,22 +187,14 @@ sheet.replaceSync(`:root {
     --theme-icon-fill-light: var(--color-system-linktext);
     --theme-icon-fill-medium: var(--color-system-linktext);
     --theme-icon-fill-dark: var(--color-system-linktext);
-
-    --theme-button-color-lighter: var(--color-system-linktext);
-    --theme-button-color-light: var(--color-system-linktext);
-    --theme-button-color-medium: var(--color-system-canvas);
-    --theme-button-color-dark: var(--color-system-canvas);
-
     --theme-button-light-text: var(--color-system-canvas);
     --theme-button-light-text-hover: var(--color-system-canvas);
     --theme-button-light-background: var(--color-system-linktext);
     --theme-button-light-background-hover: var(--color-system-linktext);
-
     --theme-button-dark-text: var(--color-system-canvas);
     --theme-button-dark-text-hover: var(--color-system-canvas);
     --theme-button-dark-background: var(--color-system-linktext);
     --theme-button-dark-background-hover: var(--color-system-linktext);
-
     --theme-navigation-text: var(--color-system-linktext);
     --theme-navigation-text-hover: var(--color-system-linktext);
     --theme-navigation-background: transparent;
