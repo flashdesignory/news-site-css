@@ -115,8 +115,8 @@ html[dir="rtl"] .dropdown-label-text {
 
 
 @media (forced-colors: active) {
-    .dropdown-label-text {
-        color: var(--high-contraste-navigation-text);
+    .dropdown-label {
+        color: var(--high-contrast-navigation-text);
     }
 
     .dropdown-label:hover {
