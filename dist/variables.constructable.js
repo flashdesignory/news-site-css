@@ -169,10 +169,10 @@ sheet.replaceSync(`:root {
     --theme-icon-fill-light: var(--color-system-linktext);
     --theme-icon-fill-medium: var(--color-system-linktext);
     --theme-icon-fill-dark: var(--color-system-linktext);
-    --theme-button-color-lighter: var(--color-system-buttonface);
-    --theme-button-color-light: var(--color-system-buttontext);
-    --theme-button-color-medium: var(--color-system-buttonface);
-    --theme-button-color-dark: var(--color-system-buttontext);
+    --theme-button-color-lighter: var(--color-system-linktext);
+    --theme-button-color-light: var(--color-system-linktext);
+    --theme-button-color-medium: var(--color-system-canvas);
+    --theme-button-color-dark: var(--color-system-canvas);
     --theme-button-color-active: var(--color-system-canvas);
 }
 `);
