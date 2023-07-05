@@ -183,7 +183,7 @@ sheet.replaceSync(`:root {
     --theme-button-color-lighter: var(--color-system-linktext);
     --theme-button-color-light: var(--color-system-linktext);
     --theme-button-color-medium: var(--color-system-canvas);
-    --theme-button-color-dark: var(--color-system-linkface);
+    --theme-button-color-dark: var(--color-system-canvas);
 
     --theme-navigation-text: var(--color-system-linktext);
     --theme-navigation-text-hover: var(--color-system-linktext);
