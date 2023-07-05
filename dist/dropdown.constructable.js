@@ -115,7 +115,7 @@ html[dir="rtl"] .dropdown-label-text {
 
 
 @media (forced-colors: active) {
-    .dropdown-label {
+    .dropdown-label-text {
         color: var(--high-contraste-navigation-text);
     }
 
