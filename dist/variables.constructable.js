@@ -139,7 +139,7 @@ sheet.replaceSync(`:root {
     --high-contrast-button-color-lighter: LinkText;
     --high-contrast-button-color-light: LinkText;
     --high-contrast-button-color-medium: Canvas;
-    --high-contrast-button-color-dark: LinkText;
+    --high-contrast-button-color-dark: Canvas;
     --high-contrast-color-active: Canvas;
 
     --high-contrast-navigation-text: LinkText;
