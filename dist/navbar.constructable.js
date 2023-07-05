@@ -34,8 +34,8 @@ sheet.replaceSync(`.navbar {
 .navbar-label-icon {
     --animated-icon-width: 24px;
     --animated-icon-background: transparent;
-    --animated-icon-color: var(--theme-icon-fill-light);
-    --animated-icon-hover: var(--theme-icon-fill-lighter);
+    --animated-icon-color: var(--theme-button-color-light);
+    --animated-icon-hover: var(--theme-button-color-lighter);
 }
 
 #navbar-toggle:checked ~ .navbar-label div span span:nth-child(2) {
@@ -219,8 +219,8 @@ html[dir="rtl"] .navbar-dropdown-item:not(:last-child) {
 
 @media (forced-colors: active) {
     .navbar-label-icon {
-        --animated-icon-color: var(--high-contrast-icon-fill-light, var(--color-system-linktext));
-        --animated-icon-hover: var(--high-contrast-icon-fill-lighter, var(--color-system-linktext));
+        --animated-icon-color: var(---high-contrast-button-color-light, var(--color-system-linktext));
+        --animated-icon-hover: var(--high-contrast-button-color-lighter, var(--color-system-linktext));
     }
 
     .navbar-item a:hover {
