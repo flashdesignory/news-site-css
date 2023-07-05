@@ -6,14 +6,14 @@ sheet.replaceSync(`.sitemap {
 }
 
 .sitemap a {
-    color: var(--theme-button-color-light);
+    color: var(--theme-navigation-text);
     transition: var(--transition-default);
     font-size: 14px;
     text-decoration: none;
 }
 
 .sitemap a:hover {
-    color: var(--theme-button-color-lighter);
+    color: var(--theme-navigation-text-hover);
     text-decoration: underline;
 }
 
@@ -65,6 +65,14 @@ sheet.replaceSync(`.sitemap {
 }
 
 @media (forced-colors: active) {
+    .sitemap a {
+        color: var(--high-contrast-navigation-text);
+    }
+    
+    .sitemap a:hover {
+        color: var(--high-contrast-navigation-text-hover);
+    }
+
     .sitemap a.active,
     .sitemap a.active:hover {
         text-decoration: var(--high-contrast-text-decoration);

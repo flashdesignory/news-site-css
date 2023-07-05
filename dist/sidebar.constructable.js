@@ -85,7 +85,7 @@ sheet.replaceSync(`.sidebar {
     display: flex;
     padding: var(--content-spacing-xsmall) var(--content-spacing-medium);
     text-decoration: none;
-    color: var(--theme-text-dark);
+    color: var(--theme-link-color);
     transition: var(--transition-default);
 }
 
