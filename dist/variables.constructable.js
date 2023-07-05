@@ -131,11 +131,11 @@ sheet.replaceSync(`:root {
     --high-contrast-icon-fill-light: LinkText;
     --high-contrast-icon-fill-medium: LinkText;
     --high-contrast-icon-fill-dark: LinkText;
-    --high-contrast-button-color-lighter: ButtonFace;
-    --high-contrast-button-color-light: ButtonText;
-    --high-contrast-button-color-medium: ButtonFace;
-    --high-contrast-button-color-dark: ButtonText;
-    --high-contrast-color-active: ButtonFace;
+    --high-contrast-button-color-lighter: LinkText;
+    --high-contrast-button-color-light: LinkText;
+    --high-contrast-button-color-medium: Canvas;
+    --high-contrast-button-color-dark: LinkText;
+    --high-contrast-color-active: Canvas;
     }
 
 :root.forced-colors {
@@ -169,11 +169,11 @@ sheet.replaceSync(`:root {
     --theme-icon-fill-light: var(--color-system-linktext);
     --theme-icon-fill-medium: var(--color-system-linktext);
     --theme-icon-fill-dark: var(--color-system-linktext);
-    --theme-button-color-lighter: var(--color-system-buttonface);
-    --theme-button-color-light: var(--color-system-buttontext);
-    --theme-button-color-medium: var(--color-system-buttonface);
-    --theme-button-color-dark: var(--color-system-buttontext);
-    --theme-button-color-active: var(--color-system-buttonface);
+    --theme-button-color-lighter: var(--color-system-linktext);
+    --theme-button-color-light: var(--color-system-linktext);
+    --theme-button-color-medium: var(--color-system-canvas);
+    --theme-button-color-dark: var(--color-system-linkface);
+    --theme-button-color-active: var(--color-system-canvas);
 }
 `);
 export default sheet;
