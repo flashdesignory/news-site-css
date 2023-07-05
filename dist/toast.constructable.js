@@ -67,12 +67,12 @@ sheet.replaceSync(`.toast {
 }
 
 .toast-description a {
-    color: var(--theme-button-color-light);
+    color: var(--theme-navigation-text);
     transition: var(--transition-default);
 }
 
 .toast-description a:hover {
-    color: var(--theme-button-color-lighter);
+    color: var(--theme-navigation-text-hover);
 }
 
 .toast-actions {

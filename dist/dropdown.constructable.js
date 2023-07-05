@@ -79,10 +79,6 @@ html[dir="rtl"] .dropdown-content {
     align-items: flex-start;
 }
 
-.dropdown:hover .dropdown-button {
-    color: var(--theme-button-color-lighter);
-}
-
 @media (max-width: 767px) {
     .dropdown-toggle {
         top: 0;

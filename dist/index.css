@@ -1245,7 +1245,7 @@ html[dir="rtl"] .advertisement-icons {
 
 .page-navigation-button {
     border: 1px solid var(--color-utils-offwhite);
-    color: var(--theme-button-color-light);
+    color: var(--theme-navigation-text);
     border-radius: var(--border-radius-small);
     height: var(--nav-button-height);
     background-color: transparent;
@@ -1254,7 +1254,7 @@ html[dir="rtl"] .advertisement-icons {
 }
 
 .page-navigation-button:hover {
-    color: var(--theme-button-color-lighter);
+    color: var(--theme-navigation-text-hover);
 }
 
 .nav-button {
@@ -1324,8 +1324,8 @@ html[dir="rtl"] .advertisement-icons {
 .navbar-label-icon {
     --animated-icon-width: 24px;
     --animated-icon-background: transparent;
-    --animated-icon-color: var(--theme-button-color-light);
-    --animated-icon-hover: var(--theme-button-color-lighter);
+    --animated-icon-color: var(---theme-navigation-text);
+    --animated-icon-hover: var(--theme-navigation-text-hover);
 }
 
 /* stylelint-disable */
@@ -1521,18 +1521,18 @@ html[dir="rtl"] .navbar-dropdown-item:not(:last-child) {
 /* High Contrast / Forced-Colors: */
 @media (forced-colors: active) {
     .navbar-label-icon {
-        --animated-icon-color: var(---high-contrast-button-color-light, var(--color-system-linktext));
-        --animated-icon-hover: var(--high-contrast-button-color-lighter, var(--color-system-linktext));
+        --animated-icon-color: var(--high-contrast-navigation-text, var(--color-system-linktext));
+        --animated-icon-hover: var(--high-contrast-navigation-text-hover, var(--color-system-linktext));
     }
 
     .navbar-item a {
-        color: var(--high-contraste-navigation-text);
+        color: var(--high-contrast-navigation-text);
         background-color: var(--high-contrast-navigation-background);
     }
 
     .navbar-item a:hover {
         color: var(--high-contrast-navigation-text-hover);
-        background-color: var(--high-contrastn-background-hover);
+        background-color: var(--high-contrast-background-hover);
         text-decoration: var(--high-contrast-text-decoration);
     }
 
@@ -1628,13 +1628,13 @@ html[dir="rtl"] .navbar-dropdown-item:not(:last-child) {
 }
 
 .footer-links .footer-links-item a {
-    color: var(--theme-button-color-light);
+    color: var(--theme-navigation-text);
     transition: var(--transition-default);
     text-decoration: none;
 }
 
 .footer-links .footer-links-item a:hover {
-    color: var(--theme-button-color-lighter);
+    color: var(--theme-navigation-text-hover);
 }
 
 @media (max-width: 767px) {
@@ -1873,10 +1873,6 @@ html[dir="rtl"] .dropdown-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-}
-
-.dropdown:hover .dropdown-button {
-    color: var(--theme-button-color-lighter);
 }
 
 @media (max-width: 767px) {
@@ -2375,12 +2371,12 @@ html[dir="rtl"] .article-image-tag svg {
 
 /* stylelint-disable */
 .toast-description a {
-    color: var(--theme-button-color-light);
+    color: var(--theme-navigation-text);
     transition: var(--transition-default);
 }
 
 .toast-description a:hover {
-    color: var(--theme-button-color-lighter);
+    color: var(--theme-navigation-text-hover);
 }
 /* stylelint-enable */
 

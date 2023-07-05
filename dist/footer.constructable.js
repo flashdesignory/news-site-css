@@ -82,13 +82,13 @@ sheet.replaceSync(`.page-footer {
 }
 
 .footer-links .footer-links-item a {
-    color: var(--theme-button-color-light);
+    color: var(--theme-navigation-text);
     transition: var(--transition-default);
     text-decoration: none;
 }
 
 .footer-links .footer-links-item a:hover {
-    color: var(--theme-button-color-lighter);
+    color: var(--theme-navigation-text-hover);
 }
 
 @media (max-width: 767px) {

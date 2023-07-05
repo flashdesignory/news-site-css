@@ -66,7 +66,7 @@ sheet.replaceSync(`.page-navigation {
 
 .page-navigation-button {
     border: 1px solid var(--color-utils-offwhite);
-    color: var(--theme-button-color-light);
+    color: var(--theme-navigation-text);
     border-radius: var(--border-radius-small);
     height: var(--nav-button-height);
     background-color: transparent;
@@ -75,7 +75,7 @@ sheet.replaceSync(`.page-navigation {
 }
 
 .page-navigation-button:hover {
-    color: var(--theme-button-color-lighter);
+    color: var(--theme-navigation-text-hover);
 }
 
 .nav-button {
