@@ -97,6 +97,7 @@ sheet.replaceSync(`.sidebar {
 
 .sidebar summary {
     cursor: pointer;
+    color: var(--theme-link-color);
 }
 
 @media (max-width: 419px) {

@@ -2696,6 +2696,7 @@ html[dir="rtl"] .message-close-button {
 
 .sidebar summary {
     cursor: pointer;
+    color: var(--theme-link-color);
 }
 
 @media (max-width: 419px) {
