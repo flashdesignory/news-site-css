@@ -34,7 +34,7 @@ sheet.replaceSync(`.navbar {
 .navbar-label-icon {
     --animated-icon-width: 24px;
     --animated-icon-background: transparent;
-    --animated-icon-color: var(---theme-navigation-text);
+    --animated-icon-color: var(--theme-navigation-text);
     --animated-icon-hover: var(--theme-navigation-text-hover);
 }
 
