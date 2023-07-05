@@ -207,15 +207,15 @@
     --theme-button-color-medium: var(--color-system-canvas);
     --theme-button-color-dark: var(--color-system-canvas);
 
-    --theme-button-light-text:var(--color-system-canvas);
+    --theme-button-light-text: var(--color-system-canvas);
     --theme-button-light-text-hover: var(--color-system-canvas);
     --theme-button-light-background: var(--color-system-linktext);
     --theme-button-light-background-hover: var(--color-system-linktext);
 
-    --theme-button-dark-text: var(--color-system-linktext);
-    --theme-button-dark-text-hover: var(--color-system-linktext);
-    --theme-button-dark-background: var(--color-system-canvas);
-    --theme-button-dark-background-hover: var(--color-system-canvas);
+    --theme-button-dark-text: var(--color-system-canvas);
+    --theme-button-dark-text-hover: var(--color-system-canvas);
+    --theme-button-dark-background: var(--color-system-linktext);
+    --theme-button-dark-background-hover: var(--color-system-linktext);
 
     --theme-navigation-text: var(--color-system-linktext);
     --theme-navigation-text-hover: var(--color-system-linktext);
@@ -809,16 +809,16 @@ img::after {
 
 .input-container .input[type="submit"] {
     cursor: pointer;
-    border-color: var(--theme-button-color-dark);
-    background-color: var(--theme-button-color-dark);
-    color: var(--theme-button-color-light);
+    border-color: var(--theme-button-dark-background);
+    background-color: var(--theme-button-dark-background);
+    color: var(--theme-button-dark-text);
 }
 
 .input-container .input[type="submit"]:hover,
 .input-container .input[type="submit"]:focus {
-    border-color: var(--theme-button-color-medium);
-    background-color: var(--theme-button-color-medium);
-    color: var(--theme-button-color-lighter);
+    border-color: var(--theme-button-dark-background-hover);
+    background-color: var(--theme-button-dark-background-hover);
+    color: var(--theme-button-dark-text-hover);
 }
 
 .input-container .input[type="date"] {
