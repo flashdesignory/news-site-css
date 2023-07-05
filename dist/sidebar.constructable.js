@@ -91,7 +91,7 @@ sheet.replaceSync(`.sidebar {
 
 .sidebar-list-item a:hover,
 .sidebar-list-item a:focus {
-    background-color: var(--theme-button-color-light);
+    background-color: var(--theme-link-background);
 }
 
 .sidebar summary {
@@ -135,6 +135,11 @@ html[dir="rtl"] .sidebar-close-button {
     .sidebar-close-button-icon {
         --animated-icon-color: var(--high-contrast-icon-fill-dark, var(--color-system-linktext));
         --animated-icon-hover: var(--high-contrast-icon-fill-medium, var(--color-system-linktext));
+    }
+
+    .sidebar-list-item a:hover,
+    .sidebar-list-item a:focus {
+        background-color: var(--high-contrast-link-background);
     }
 }
 `);

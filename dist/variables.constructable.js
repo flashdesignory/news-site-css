@@ -91,6 +91,7 @@ sheet.replaceSync(`:root {
     --theme-link-highlight: var(--color-utils-red);
     --theme-link-color: var(--color-utils-black);
     --theme-link-hover: var(--color-utils-gray-light);
+    --theme-link-background: var(--color-utils-offwhite);
     --theme-text-highlight: var(--color-utils-red-light);
     --theme-text-lighter: var(--color-utils-white);
     --theme-text-light: var(--color-utils-offwhite);
@@ -119,6 +120,7 @@ sheet.replaceSync(`:root {
     --high-contrast-small-border: var(--high-contrast-border-width-small) solid var(--color-utils-black);
     --high-contrast-medium-border: var(--high-contrast-border-width-medium) solid var(--color-utils-black);
     --high-contrast-text-decoration: underline;
+    --high-contrast-link-background: Canvas;
     --high-contrast-modal-background: var(--color-utils-white);
     --high-contrast-toggle-switch: LinkText;
     --high-contrast-toggle-background: var(--color-utils-white);
@@ -152,6 +154,7 @@ sheet.replaceSync(`:root {
     --theme-link-highlight: var(--color-system-linktext);
     --theme-link-color: var(--color-system-linktext);
     --theme-link-hover: var(--color-system-linktext);
+    --theme-link-background: var(--color-system-canvas);
     --theme-text-highlight: var(--color-system-linktext);
     --theme-text-lighter: var(--color-system-neutral);
     --theme-text-light: var(--color-system-neutral);
