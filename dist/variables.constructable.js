@@ -110,6 +110,12 @@ sheet.replaceSync(`:root {
     --theme-button-color-dark: var(--color-utils-black);
     --theme-button-color-active: var(--color-utils-gray);
 
+    --theme-navigation-text: var(--color-utils-offwhite);
+    --theme-navigation-text-hover: var(--color-utils-white);
+    --theme-navigation-background: transparent;
+    --theme-navigation-background-hover: var(--color-utils-gray); 
+    --theme-navigation-background-active: var(--color-utils-gray-light);
+
         --color-system-linktext: #00009f;
     --color-system-linkface: #e6e6e6;
     --color-system-buttontext: #000000;
@@ -136,7 +142,13 @@ sheet.replaceSync(`:root {
     --high-contrast-button-color-medium: Canvas;
     --high-contrast-button-color-dark: LinkText;
     --high-contrast-color-active: Canvas;
-    }
+
+    --high-contrast-navigation-text: LinkText;
+    --high-contrast-navigation-text-hover: LinkText;
+    --high-contrast-navigation-background: transparent;
+    --high-contrast-navigation-background-hover: transparent;
+    --high-contrast-navigation-background-active: transparent;
+}
 
 :root.forced-colors {
         --theme-border-width-small: 1px;
@@ -174,6 +186,12 @@ sheet.replaceSync(`:root {
     --theme-button-color-medium: var(--color-system-canvas);
     --theme-button-color-dark: var(--color-system-linkface);
     --theme-button-color-active: var(--color-system-canvas);
+
+    --theme-navigation-text: var(--color-system-linktext);
+    --theme-navigation-text-hover: var(--color-system-linktext);
+    --theme-navigation-background: transparent;
+    --theme-navigation-background-hover: transparent;
+    --theme-navigation-background-active: transparent;
 }
 `);
 export default sheet;

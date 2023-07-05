@@ -87,7 +87,8 @@ sheet.replaceSync(`.navbar {
 
 .navbar-item a {
     text-decoration: none;
-    color: var(--theme-button-color-light);
+    color: var(--theme-navigation-text);
+    background-color: var(--theme-navigation-background);
     position: relative;
     line-height: var(--nav-button-height);
     display: flex;
@@ -103,14 +104,14 @@ sheet.replaceSync(`.navbar {
 }
 
 .navbar-item a:hover {
-    color: var(--theme-button-color-lighter);
-    background-color: var(--theme-button-color-medium);
+    color: var(--theme-navigation-text-hover);
+    background-color: var(--theme-navigation-background-hover);
     text-decoration: var(--theme-text-decoration);
 }
 
 .navbar-item a.active {
-    color: var(--theme-button-color-lighter);
-    background-color: var(--theme-button-color-active);
+    color: var(--theme-navigation-text-hover);
+    background-color: var(--theme-navigation-background-active);
     border: var(--theme-small-border);
 }
 
@@ -223,12 +224,20 @@ html[dir="rtl"] .navbar-dropdown-item:not(:last-child) {
         --animated-icon-hover: var(--high-contrast-button-color-lighter, var(--color-system-linktext));
     }
 
+    .navbar-item a {
+        color: var(--high-contraste-navigation-text);
+        background-color: var(--high-contrast-navigation-background);
+    }
+
     .navbar-item a:hover {
+        color: var(--high-contrast-navigation-text-hover);
+        background-color: var(--high-contrastn-background-hover);
         text-decoration: var(--high-contrast-text-decoration);
     }
 
     .navbar-item a.active {
         border: var(--high-contrast-small-border);
+        background-color: var(--high-contrast-navigation-background-active);
     }
 }
 `);

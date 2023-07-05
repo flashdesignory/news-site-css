@@ -21,7 +21,7 @@ sheet.replaceSync(`.dropdown {
 
 .dropdown-label {
     background-color: var(--theme-ui-foreground);
-    color: var(--theme-button-color-light);
+    color: var(--theme-navigation-text);
     height: var(--nav-button-height);
     cursor: pointer;
     display: flex;
@@ -37,8 +37,8 @@ sheet.replaceSync(`.dropdown {
 }
 
 .dropdown-label:hover {
-    color: var(--theme-button-color-lighter);
-    background-color: var(--theme-button-color-medium);
+    color: var(--theme-navigation-text-hover);
+    background-color: var(--theme-navigation-background-hover);
     text-decoration: var(--theme-text-decoration);
 }
 
@@ -115,11 +115,13 @@ html[dir="rtl"] .dropdown-label-text {
 
 
 @media (forced-colors: active) {
-    .dropdown-label-text {
-        color: var(--high-contrast-button-color-light, var(--color-system-linktext));
+    .dropdown-label {
+        color: var(--high-contraste-navigation-text);
     }
 
     .dropdown-label:hover {
+        color: var(--high-contrast-navigation-text-hover);
+        background-color: var(--high-contrastn-background-hover);
         text-decoration: var(--high-contrast-text-decoration);
     }
 }

@@ -116,6 +116,12 @@
     --theme-button-color-dark: var(--color-utils-black);
     --theme-button-color-active: var(--color-utils-gray);
 
+    --theme-navigation-text: var(--color-utils-offwhite);
+    --theme-navigation-text-hover: var(--color-utils-white);
+    --theme-navigation-background: transparent;
+    --theme-navigation-background-hover: var(--color-utils-gray); 
+    --theme-navigation-background-active: var(--color-utils-gray-light);
+
     /* define system colors */
     --color-system-linktext: #00009f;
     --color-system-linkface: #e6e6e6;
@@ -145,7 +151,12 @@
     --high-contrast-button-color-medium: Canvas;
     --high-contrast-button-color-dark: LinkText;
     --high-contrast-color-active: Canvas;
-    /* stylelint enable */
+
+    --high-contrast-navigation-text: LinkText;
+    --high-contrast-navigation-text-hover: LinkText;
+    --high-contrast-navigation-background: transparent;
+    --high-contrast-navigation-background-hover: transparent;
+    --high-contrast-navigation-background-active: transparent;
 }
 
 :root.forced-colors {
@@ -185,6 +196,12 @@
     --theme-button-color-medium: var(--color-system-canvas);
     --theme-button-color-dark: var(--color-system-linkface);
     --theme-button-color-active: var(--color-system-canvas);
+
+    --theme-navigation-text: var(--color-system-linktext);
+    --theme-navigation-text-hover: var(--color-system-linktext);
+    --theme-navigation-background: transparent;
+    --theme-navigation-background-hover: transparent;
+    --theme-navigation-background-active: transparent;
 }
 /* reset */
 html,
@@ -1364,7 +1381,8 @@ html[dir="rtl"] .advertisement-icons {
 
 .navbar-item a {
     text-decoration: none;
-    color: var(--theme-button-color-light);
+    color: var(--theme-navigation-text);
+    background-color: var(--theme-navigation-background);
     position: relative;
     line-height: var(--nav-button-height);
     display: flex;
@@ -1380,14 +1398,14 @@ html[dir="rtl"] .advertisement-icons {
 }
 
 .navbar-item a:hover {
-    color: var(--theme-button-color-lighter);
-    background-color: var(--theme-button-color-medium);
+    color: var(--theme-navigation-text-hover);
+    background-color: var(--theme-navigation-background-hover);
     text-decoration: var(--theme-text-decoration);
 }
 
 .navbar-item a.active {
-    color: var(--theme-button-color-lighter);
-    background-color: var(--theme-button-color-active);
+    color: var(--theme-navigation-text-hover);
+    background-color: var(--theme-navigation-background-active);
     border: var(--theme-small-border);
 }
 
@@ -1509,12 +1527,20 @@ html[dir="rtl"] .navbar-dropdown-item:not(:last-child) {
         --animated-icon-hover: var(--high-contrast-button-color-lighter, var(--color-system-linktext));
     }
 
+    .navbar-item a {
+        color: var(--high-contraste-navigation-text);
+        background-color: var(--high-contrast-navigation-background);
+    }
+
     .navbar-item a:hover {
+        color: var(--high-contrast-navigation-text-hover);
+        background-color: var(--high-contrastn-background-hover);
         text-decoration: var(--high-contrast-text-decoration);
     }
 
     .navbar-item a.active {
         border: var(--high-contrast-small-border);
+        background-color: var(--high-contrast-navigation-background-active);
     }
 }
 .page-footer {
@@ -1787,7 +1813,7 @@ html[dir="rtl"] .dialog-close-button {
 
 .dropdown-label {
     background-color: var(--theme-ui-foreground);
-    color: var(--theme-button-color-light);
+    color: var(--theme-navigation-text);
     height: var(--nav-button-height);
     cursor: pointer;
     display: flex;
@@ -1803,8 +1829,8 @@ html[dir="rtl"] .dialog-close-button {
 }
 
 .dropdown-label:hover {
-    color: var(--theme-button-color-lighter);
-    background-color: var(--theme-button-color-medium);
+    color: var(--theme-navigation-text-hover);
+    background-color: var(--theme-navigation-background-hover);
     text-decoration: var(--theme-text-decoration);
 }
 
@@ -1887,11 +1913,13 @@ html[dir="rtl"] .dropdown-label-text {
 
 /* High Contrast / Forced-Colors: */
 @media (forced-colors: active) {
-    .dropdown-label-text {
-        color: var(--high-contrast-button-color-light, var(--color-system-linktext));
+    .dropdown-label {
+        color: var(--high-contraste-navigation-text);
     }
 
     .dropdown-label:hover {
+        color: var(--high-contrast-navigation-text-hover);
+        background-color: var(--high-contrastn-background-hover);
         text-decoration: var(--high-contrast-text-decoration);
     }
 }
