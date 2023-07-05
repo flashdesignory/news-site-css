@@ -80,16 +80,16 @@ sheet.replaceSync(`.input-container {
 
 @media (forced-colors: active) {
     .input-container .input[type="submit"] {
-        border-color: var(--high-contrast-button-dark-background);
-        background-color: var(--high-contrast-button-dark-background);
-        color: var(--high-contrast-button-dark-text);
+        border-color: var(--high-contrast-button-light-background);
+        background-color: var(--high-contrast-button-light-background);
+        color: var(--high-contrast-button-light-text);
     }
     
     .input-container .input[type="submit"]:hover,
     .input-container .input[type="submit"]:focus {
-        border-color: var(--high-contrast-button-dark-background-hover);
-        background-color: var(--high-contrast-button-dark-background-hover);
-        color: var(--high-contrast-button-dark-text-hover);
+        border-color: var(--high-contrast-button-light-background-hover);
+        background-color: var(--high-contrast-button-light-background-hover);
+        color: var(--high-contrast-button-light-text-hover);
     }
 }`);
 export default sheet;

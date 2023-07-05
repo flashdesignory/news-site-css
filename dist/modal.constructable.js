@@ -103,7 +103,7 @@ html[dir="rtl"] .modal-close-button {
 
 
 @media (forced-colors: active) {
-    .modal {
+    .modal-content {
         border: var(--high-contrast-medium-border);
     }
 
