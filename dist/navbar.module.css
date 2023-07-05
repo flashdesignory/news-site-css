@@ -249,4 +249,8 @@ html[dir="rtl"] .navbar-dropdown-item:not(:last-child) {
         border: var(--high-contrast-small-border);
         background-color: var(--high-contrast-navigation-background-active);
     }
+
+    .navbar-active-path {
+        color: var(--high-contrast-navigation-text-hover);
+    }
 }
