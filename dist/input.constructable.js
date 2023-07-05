@@ -77,5 +77,19 @@ sheet.replaceSync(`.input-container {
     right: var(--content-spacing-medium);
     bottom: calc((40px - 24px) / 2);
 }
-`);
+
+@media (forced-colors: active) {
+    .input-container .input[type="submit"] {
+        border-color: var(--high-contrast-button-color-dark);
+        background-color: var(--high-contrast-button-color-dark);
+        color: var(--high-contrast-button-color-light);
+    }
+    
+    .input-container .input[type="submit"]:hover,
+    .input-container .input[type="submit"]:focus {
+        border-color: var(--high-contrast-button-color-medium);
+        background-color: var(--high-contrast-button-color-medium);
+        color: var(--high-contrast-button-color-lighter);
+    }
+}`);
 export default sheet;
