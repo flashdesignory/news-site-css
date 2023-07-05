@@ -194,8 +194,8 @@ html[dir="rtl"] .navbar-dropdown-item:not(:last-child) {
         .navbar-active-path {
         display: flex;
         margin: 0 var(--content-spacing-small);
-        color: var(--theme-text-lighter);
-        background-color: var(--theme-button-color-active);
+        color: var(--theme-navigation-text-hover);
+        background-color: var(--theme-navigation-background-active);
         line-height: var(--nav-button-height);
         border-radius: var(--border-radius-small);
         padding: 0 8px;

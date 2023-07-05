@@ -108,7 +108,6 @@ sheet.replaceSync(`:root {
     --theme-button-color-light: var(--color-utils-offwhite);
     --theme-button-color-medium: var(--color-utils-gray-light);
     --theme-button-color-dark: var(--color-utils-black);
-    --theme-button-color-active: var(--color-utils-gray);
 
     --theme-navigation-text: var(--color-utils-offwhite);
     --theme-navigation-text-hover: var(--color-utils-white);
@@ -185,7 +184,6 @@ sheet.replaceSync(`:root {
     --theme-button-color-light: var(--color-system-linktext);
     --theme-button-color-medium: var(--color-system-canvas);
     --theme-button-color-dark: var(--color-system-linkface);
-    --theme-button-color-active: var(--color-system-canvas);
 
     --theme-navigation-text: var(--color-system-linktext);
     --theme-navigation-text-hover: var(--color-system-linktext);
