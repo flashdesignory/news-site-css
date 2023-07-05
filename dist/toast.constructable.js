@@ -6,11 +6,12 @@ sheet.replaceSync(`.toast {
     display: none;
     width: 100%;
     min-height: 100px;
-    color: var(--color-utils-offwhite);
-    background-color: rgb(0 0 0 / 75%);
+    color: var(--theme-text-light);
+    background-color: var(--theme-toast-background);
     font-family: var(--font-family-default);
     z-index: var(--index-important);
     padding: var(--content-spacing-xlarge);
+    border-top: var(--theme-medium-border);
 }
 
 .toast:target,
@@ -35,8 +36,8 @@ sheet.replaceSync(`.toast {
 .toast-close-button-icon {
     --animated-icon-width: 24px;
     --animated-icon-background: transparent;
-    --animated-icon-color: var(--color-utils-offwhite);
-    --animated-icon-hover: var(--color-utils-white);
+    --animated-icon-color: var(--theme-icon-fill-light);
+    --animated-icon-hover: var(--theme-icon-fill-lighter);
 }
 
 .toast-header {
@@ -66,12 +67,12 @@ sheet.replaceSync(`.toast {
 }
 
 .toast-description a {
-    color: var(--color-utils-offwhite);
+    color: var(--theme-button-color-light);
     transition: var(--transition-default);
 }
 
 .toast-description a:hover {
-    color: var(--color-utils-white);
+    color: var(--theme-button-color-lighter);
 }
 
 .toast-actions {
@@ -97,5 +98,17 @@ html[dir="rtl"] .toast-close-button {
     right: unset;
 }
 
+
+@media (forced-colors: active) {
+    .toast {
+        border-top: var(--high-contrast-medium-border);
+        background-color: var(--high-contrast-modal-background);
+    }
+
+    .toast-close-button-icon {
+        --animated-icon-color: var(--high-contrast-icon-fill-light, var(--color-system-linktext));
+        --animated-icon-hover: var(--high-contrast-icon-fill-lighter, var(--color-system-linktext));
+    }
+}
 `);
 export default sheet;

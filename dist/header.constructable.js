@@ -7,8 +7,8 @@ sheet.replaceSync(`.page-header {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    color: var(--color-utils-offwhite);
-    background-color: var(--color-utils-black);
+    color: var(--theme-text-light);
+    background-color: var(--theme-ui-foreground);
     z-index: var(--indxe-content-title);
     padding: var(--content-spacing-xlarge) var(--content-spacing-xlarge) var(--content-spacing-xsmall) var(--content-spacing-xlarge);
 }
@@ -21,7 +21,22 @@ sheet.replaceSync(`.page-header {
 }
 
 .page-header-title svg path {
-    fill: var(--color-utils-offwhite);
+    fill: var(--theme-icon-fill-light);
+    transition: var(--transition-default);
+}
+
+.page-header-title:hover svg path {
+    fill: var(--theme-icon-fill-lighter);
+}
+
+@media (forced-colors: active) {
+    .page-header-title svg path {
+        fill: var(--high-contrast-icon-fill-light, var(--color-system-linktext));
+    }
+
+    .page-header-title:hover svg path {
+        fill: var(--high-contrast-icon-fill-light, var(--color-system-linktext));
+    }
 }
 `);
 export default sheet;

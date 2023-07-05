@@ -38,6 +38,29 @@ sheet.replaceSync(`.visually-hidden {
     }
 }
 
+.forced-colors *:not(button):not(.animated-icon),
+.forced-colors *::before,
+.forced-colors *::after {
+    text-decoration-color: unset !important;
+    text-emphasis-color: unset !important;
+    border-color: unset !important;
+    outline-color: unset !important;
+    column-rule-color: unset !important;
+    -webkit-tap-highlight-color: unset !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    background-image: none !important;
+    color-scheme: light dark !important;
+    scrollbar-color: auto !important;
+}
+
+@media (forced-colors: active) {
+    button,
+    .animated-icon {
+        forced-color-adjust: none;
+    }
+}
+
 .skip-link {
     background: var(--color-utils-red);
     color: var(--color-utils-white);

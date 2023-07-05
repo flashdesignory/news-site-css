@@ -9,8 +9,19 @@ sheet.replaceSync(`.page-footer {
     min-height: var(--footer-height);
     padding: var(--content-spacing-small) 0;
     font-size: var(--font-size-small);
-    background-color: var(--color-utils-black);
-    color: var(--color-utils-gray-lighter);
+    background-color: var(--theme-ui-foreground);
+    color: var(--theme-text-medium);
+    position: relative;
+}
+
+.page-footer::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    width: calc(100% - (var(--content-spacing-xlarge) * 2));
+    margin: auto;
+    border-top: var(--theme-small-border);
 }
 
 .footer-row {
@@ -71,13 +82,13 @@ sheet.replaceSync(`.page-footer {
 }
 
 .footer-links .footer-links-item a {
-    color: var(--color-utils-offwhite);
-    transition: fill 0.3s ease;
+    color: var(--theme-button-color-light);
+    transition: var(--transition-default);
     text-decoration: none;
 }
 
 .footer-links .footer-links-item a:hover {
-    color: var(--color-utils-white);
+    color: var(--theme-button-color-lighter);
 }
 
 @media (max-width: 767px) {
@@ -114,10 +125,17 @@ sheet.replaceSync(`.page-footer {
     }
 }
 
+/** RTL FOOTER START **/
 html[dir="rtl"] .footer-links .footer-links-item:not(:last-child) {
     margin-left: var(--content-spacing-large);
     margin-right: unset;
 }
 
+
+@media (forced-colors: active) {
+    .page-footer::before {
+        border-top: var(--high-contrast-small-border);
+    }
+}
 `);
 export default sheet;

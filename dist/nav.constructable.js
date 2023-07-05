@@ -8,8 +8,18 @@ sheet.replaceSync(`.page-navigation {
     height: var(--nav-height);
     position: sticky;
     top: 0;
-    background-color: var(--color-utils-black);
+    background-color: var(--theme-ui-foreground);
     z-index: var(--index-header);
+}
+
+.page-navigation::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    width: calc(100% - (var(--content-spacing-xlarge) * 2));
+    margin: auto;
+    border-bottom: var(--theme-small-border);
 }
 
 .page-navigation-row {
@@ -43,18 +53,20 @@ sheet.replaceSync(`.page-navigation {
     cursor: pointer;
 }
 
+/* stylelint-disable */
 .page-navigation-logo svg path {
+    fill: var(--theme-icon-fill-light);
     transition: var(--transition-default);
-    fill: var(--color-utils-offwhite);
 }
 
 .page-navigation-logo:hover svg path {
-    fill: var(--color-utils-white);
+    fill: var(--theme-icon-fill-lighter);
 }
+/* stylelint-enable */
 
 .page-navigation-button {
     border: 1px solid var(--color-utils-offwhite);
-    color: var(--color-utils-offwhite);
+    color: var(--theme-button-color-light);
     border-radius: var(--border-radius-small);
     height: var(--nav-button-height);
     background-color: transparent;
@@ -63,7 +75,7 @@ sheet.replaceSync(`.page-navigation {
 }
 
 .page-navigation-button:hover {
-    color: var(--color-utils-white);
+    color: var(--theme-button-color-lighter);
 }
 
 .nav-button {
@@ -75,11 +87,26 @@ sheet.replaceSync(`.page-navigation {
         margin-left: var(--content-spacing-small);
     }
 
-        html[dir="rtl"] .page-navigation-logo {
+    /** RTL NAV START **/
+    html[dir="rtl"] .page-navigation-logo {
         margin-right: var(--content-spacing-small);
         margin-left: unset;
     }
 
     }
+
+@media (forced-colors: active) {
+    .page-navigation::after {
+        border-bottom: var(--high-contrast-small-border);
+    }
+
+    .page-navigation-logo svg path {
+        fill: var(--high-contrast-icon-fill-light, var(--color-system-linktext));
+    }
+
+    .page-navigation-logo:hover svg path {
+        fill: var(--high-contrast-icon-fill-lighter, var(--color-system-linktext));
+    }
+}
 `);
 export default sheet;

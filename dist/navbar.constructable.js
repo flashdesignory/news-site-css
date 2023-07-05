@@ -24,7 +24,7 @@ sheet.replaceSync(`.navbar {
     width: var(--icon-size);
     height: var(--icon-size);
     cursor: pointer;
-    background-color: var(--color-utils-black);
+    background-color: var(--theme-ui-foreground);
     transition: var(--transition-default);
     border: 1px solid var(--color-utils-offwhite);
     border-radius: var(--border-radius-small);
@@ -34,8 +34,8 @@ sheet.replaceSync(`.navbar {
 .navbar-label-icon {
     --animated-icon-width: 24px;
     --animated-icon-background: transparent;
-    --animated-icon-color: var(--color-utils-offwhite);
-    --animated-icon-hover: var(--color-utils-white);
+    --animated-icon-color: var(--theme-icon-fill-light);
+    --animated-icon-hover: var(--theme-icon-fill-lighter);
 }
 
 #navbar-toggle:checked ~ .navbar-label div span span:nth-child(2) {
@@ -87,7 +87,7 @@ sheet.replaceSync(`.navbar {
 
 .navbar-item a {
     text-decoration: none;
-    color: var(--color-utils-offwhite);
+    color: var(--theme-button-color-light);
     position: relative;
     line-height: var(--nav-button-height);
     display: flex;
@@ -103,13 +103,15 @@ sheet.replaceSync(`.navbar {
 }
 
 .navbar-item a:hover {
-    color: var(--color-utils-white);
-    background-color: var(--color-utils-gray);
+    color: var(--theme-button-color-lighter);
+    background-color: var(--theme-button-color-medium);
+    text-decoration: var(--theme-text-decoration);
 }
 
 .navbar-item a.active {
-    color: var(--color-utils-white);
-    background-color: var(--color-utils-gray-light);
+    color: var(--theme-button-color-lighter);
+    background-color: var(--theme-button-color-active);
+    border: var(--theme-small-border);
 }
 
 .navbar-active-path {
@@ -182,7 +184,7 @@ html[dir="rtl"] .navbar-dropdown-item:not(:last-child) {
         position: absolute;
         left: 0;
         top: 0;
-        background-color: var(--color-utils-black);
+        background-color: var(--theme-ui-foreground);
         width: 100%;
         height: 100vh;         height: calc(var(--vh, 1vh) * 100);         padding: 0 var(--content-spacing-xlarge);
         overflow: hidden;
@@ -191,8 +193,8 @@ html[dir="rtl"] .navbar-dropdown-item:not(:last-child) {
         .navbar-active-path {
         display: flex;
         margin: 0 var(--content-spacing-small);
-        color: var(--color-utils-white);
-        background-color: var(--color-utils-gray-light);
+        color: var(--theme-text-lighter);
+        background-color: var(--theme-button-color-active);
         line-height: var(--nav-button-height);
         border-radius: var(--border-radius-small);
         padding: 0 8px;
@@ -214,5 +216,20 @@ html[dir="rtl"] .navbar-dropdown-item:not(:last-child) {
     }
 
     }
+
+@media (forced-colors: active) {
+    .navbar-label-icon {
+        --animated-icon-color: var(--high-contrast-icon-fill-light, var(--color-system-linktext));
+        --animated-icon-hover: var(--high-contrast-icon-fill-lighter, var(--color-system-linktext));
+    }
+
+    .navbar-item a:hover {
+        text-decoration: var(--high-contrast-text-decoration);
+    }
+
+    .navbar-item a.active {
+        border: var(--high-contrast-small-border);
+    }
+}
 `);
 export default sheet;
