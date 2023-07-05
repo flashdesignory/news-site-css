@@ -104,10 +104,21 @@ sheet.replaceSync(`:root {
     --theme-icon-fill-light: var(--color-utils-offwhite);
     --theme-icon-fill-medium: var(--color-utils-gray-light);
     --theme-icon-fill-dark: var(--color-utils-black);
+    
     --theme-button-color-lighter: var(--color-utils-white);
     --theme-button-color-light: var(--color-utils-offwhite);
     --theme-button-color-medium: var(--color-utils-gray-light);
     --theme-button-color-dark: var(--color-utils-black);
+
+    --theme-button-light-text: var(--theme-button-color-dark);
+    --theme-button-light-text-hover: var(--theme-button-color-medium);
+    --theme-button-light-background: var(--theme-button-color-light);
+    --theme-button-light-background-hover: var(--theme-button-color-lighter);
+
+    --theme-button-dark-text: var(--theme-button-color-light);
+    --theme-button-dark-text-hover: var(--theme-button-color-lighter);
+    --theme-button-dark-background: var(--theme-button-color-dark);
+    --theme-button-dark-background-hover: var(--theme-button-color-medium);
 
     --theme-navigation-text: var(--color-utils-offwhite);
     --theme-navigation-text-hover: var(--color-utils-white);
@@ -180,6 +191,7 @@ sheet.replaceSync(`:root {
     --theme-icon-fill-light: var(--color-system-linktext);
     --theme-icon-fill-medium: var(--color-system-linktext);
     --theme-icon-fill-dark: var(--color-system-linktext);
+
     --theme-button-color-lighter: var(--color-system-linktext);
     --theme-button-color-light: var(--color-system-linktext);
     --theme-button-color-medium: var(--color-system-canvas);

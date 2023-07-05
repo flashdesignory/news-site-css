@@ -110,10 +110,21 @@
     --theme-icon-fill-light: var(--color-utils-offwhite);
     --theme-icon-fill-medium: var(--color-utils-gray-light);
     --theme-icon-fill-dark: var(--color-utils-black);
+    
     --theme-button-color-lighter: var(--color-utils-white);
     --theme-button-color-light: var(--color-utils-offwhite);
     --theme-button-color-medium: var(--color-utils-gray-light);
     --theme-button-color-dark: var(--color-utils-black);
+
+    --theme-button-light-text: var(--theme-button-color-dark);
+    --theme-button-light-text-hover: var(--theme-button-color-medium);
+    --theme-button-light-background: var(--theme-button-color-light);
+    --theme-button-light-background-hover: var(--theme-button-color-lighter);
+
+    --theme-button-dark-text: var(--theme-button-color-light);
+    --theme-button-dark-text-hover: var(--theme-button-color-lighter);
+    --theme-button-dark-background: var(--theme-button-color-dark);
+    --theme-button-dark-background-hover: var(--theme-button-color-medium);
 
     --theme-navigation-text: var(--color-utils-offwhite);
     --theme-navigation-text-hover: var(--color-utils-white);
@@ -190,6 +201,7 @@
     --theme-icon-fill-light: var(--color-system-linktext);
     --theme-icon-fill-medium: var(--color-system-linktext);
     --theme-icon-fill-dark: var(--color-system-linktext);
+
     --theme-button-color-lighter: var(--color-system-linktext);
     --theme-button-color-light: var(--color-system-linktext);
     --theme-button-color-medium: var(--color-system-canvas);
@@ -544,49 +556,49 @@ html[dir="rtl"] .icons-group .icons-group-item:not(:last-child) {
 }
 
 .primary-button {
-    border: 1px solid var(--theme-button-color-light);
-    background-color: var(--theme-button-color-light);
-    color: var(--theme-button-color-dark);
-}
-
-.primary-button.dark {
-    border: 1px solid var(--theme-button-color-dark);
-    background-color: var(--theme-button-color-dark);
-    color: var(--theme-button-color-light);
+    border: 1px solid var(--theme-button-light-background);
+    background-color: var(--theme-button-light-background);
+    color: var(--theme-button-light-text);
 }
 
 .primary-button:hover {
-    border-color: var(--theme-button-color-lighter);
-    background-color: var(--theme-button-color-lighter);
-    color: var(--theme-button-color-medium);
-}
-
-.primary-button.dark:hover {
-    border-color: var(--theme-button-color-medium);
-    background-color: var(--theme-button-color-medium);
-    color: var(--theme-button-color-lighter);
+    border-color: var(--theme-button-light-background-hover);
+    background-color: var(--theme-button-light-background-hover);
+    color: var(--theme-button-light-text-hover);
 }
 
 .secondary-button {
-    border: 1px solid var(--theme-button-color-light);
+    border: 1px solid var(--theme-button-light-background);
     background-color: transparent;
-    color: var(--theme-button-color-light);
-}
-
-.secondary-button.dark {
-    border: 1px solid var(--theme-button-color-dark);
-    background-color: transparent;
-    color: var(--theme-button-color-dark);
+    color: var(--theme-button-light-background);
 }
 
 .secondary-button:hover {
-    border-color: var(--theme-button-color-lighter);
-    color: var(--theme-button-color-lighter);
+    border-color: var(--theme-button-light-background-hover);
+    color: var(--theme-button-light-background-hover);
+}
+
+.primary-button.dark {
+    border: 1px solid var(--theme-button-dark-background);
+    background-color: var(--theme-button-dark-background);
+    color: var(--theme-button-dark-text);
+}
+
+.primary-button.dark:hover {
+    border-color: var(--theme-button-dark-background-hover);
+    background-color: var(--theme-button-dark-background-hover);
+    color: var(--theme-button-dark-text-hover);
+}
+
+.secondary-button.dark {
+    border: 1px solid var(--theme-button-dark-background);
+    background-color: transparent;
+    color: var(--theme-button-dark-background);
 }
 
 .secondary-button.dark:hover {
-    border-color: var(--theme-button-color-medium);
-    color: var(--theme-button-color-medium);
+    border-color: var(--theme-button-dark-background-hover);
+    color: var(--theme-button-dark-background-hover);
 }
 
 /* High Contrast / Forced-Colors: */

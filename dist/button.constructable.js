@@ -17,49 +17,49 @@ sheet.replaceSync(`.button {
 }
 
 .primary-button {
-    border: 1px solid var(--theme-button-color-light);
-    background-color: var(--theme-button-color-light);
-    color: var(--theme-button-color-dark);
-}
-
-.primary-button.dark {
-    border: 1px solid var(--theme-button-color-dark);
-    background-color: var(--theme-button-color-dark);
-    color: var(--theme-button-color-light);
+    border: 1px solid var(--theme-button-light-background);
+    background-color: var(--theme-button-light-background);
+    color: var(--theme-button-light-text);
 }
 
 .primary-button:hover {
-    border-color: var(--theme-button-color-lighter);
-    background-color: var(--theme-button-color-lighter);
-    color: var(--theme-button-color-medium);
-}
-
-.primary-button.dark:hover {
-    border-color: var(--theme-button-color-medium);
-    background-color: var(--theme-button-color-medium);
-    color: var(--theme-button-color-lighter);
+    border-color: var(--theme-button-light-background-hover);
+    background-color: var(--theme-button-light-background-hover);
+    color: var(--theme-button-light-text-hover);
 }
 
 .secondary-button {
-    border: 1px solid var(--theme-button-color-light);
+    border: 1px solid var(--theme-button-light-background);
     background-color: transparent;
-    color: var(--theme-button-color-light);
-}
-
-.secondary-button.dark {
-    border: 1px solid var(--theme-button-color-dark);
-    background-color: transparent;
-    color: var(--theme-button-color-dark);
+    color: var(--theme-button-light-background);
 }
 
 .secondary-button:hover {
-    border-color: var(--theme-button-color-lighter);
-    color: var(--theme-button-color-lighter);
+    border-color: var(--theme-button-light-background-hover);
+    color: var(--theme-button-light-background-hover);
+}
+
+.primary-button.dark {
+    border: 1px solid var(--theme-button-dark-background);
+    background-color: var(--theme-button-dark-background);
+    color: var(--theme-button-dark-text);
+}
+
+.primary-button.dark:hover {
+    border-color: var(--theme-button-dark-background-hover);
+    background-color: var(--theme-button-dark-background-hover);
+    color: var(--theme-button-dark-text-hover);
+}
+
+.secondary-button.dark {
+    border: 1px solid var(--theme-button-dark-background);
+    background-color: transparent;
+    color: var(--theme-button-dark-background);
 }
 
 .secondary-button.dark:hover {
-    border-color: var(--theme-button-color-medium);
-    color: var(--theme-button-color-medium);
+    border-color: var(--theme-button-dark-background-hover);
+    color: var(--theme-button-dark-background-hover);
 }
 
 @media (forced-colors: active) {
