@@ -108,7 +108,7 @@ html[dir="rtl"] .toggle-container .label input[type="checkbox"]:checked + .switc
     }
 
     /** RTL TOGGLE START **/
-    html[dir="rtl"] html[dir="rtl"] .toggle-container .label input[type="checkbox"]:checked + .switch::before {
+    html[dir="rtl"] .toggle-container .label input[type="checkbox"]:checked + .switch::before {
         transform: translate(20px, -11px);
     }
 

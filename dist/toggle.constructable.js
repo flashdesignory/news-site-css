@@ -104,7 +104,7 @@ html[dir="rtl"] .toggle-container .label input[type="checkbox"]:checked + .switc
         background-color: var(--high-contrast-toggle-switch, var(--color-system-linktext));
     }
 
-        html[dir="rtl"] html[dir="rtl"] .toggle-container .label input[type="checkbox"]:checked + .switch::before {
+        html[dir="rtl"] .toggle-container .label input[type="checkbox"]:checked + .switch::before {
         transform: translate(20px, -11px);
     }
 
