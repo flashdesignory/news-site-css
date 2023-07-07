@@ -45,5 +45,11 @@ sheet.replaceSync(`.form-container {
 .form-actions .form-actions-item:not(:last-child) {
     margin-right: var(--content-spacing-medium);
 }
+
+html[dir="rtl"] .form-actions .form-actions-item:not(:last-child){
+    margin-left: var(--content-spacing-medium);
+    margin-right: unset;
+}
+
 `);
 export default sheet;
