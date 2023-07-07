@@ -60,13 +60,6 @@ sheet.replaceSync(`.toggle-outer {
     transition: var(--transition-default);
 }
 
-/** RTL TOGGLE START **/
-html[dir="rtl"] .toggle-container .switch::before {
-    right: calc(var(--theme-border-width-medium) * -1);
-    left: unset;
-}
-
-
 .toggle-container .label input[type="checkbox"] {
     width: 44px;
     height: 16px;
@@ -83,6 +76,11 @@ html[dir="rtl"] .toggle-container .switch::before {
 .toggle-container .label input[type="checkbox"]:checked + .switch {
     width: 100%;
 }
+
+html[dir="rtl"] .toggle-container .label input[type="checkbox"]:checked + .switch::before {
+    transform: translate(0, -11px);
+}
+
 
 @media (forced-colors: active) {
     .toggle-container {
@@ -106,9 +104,8 @@ html[dir="rtl"] .toggle-container .switch::before {
         background-color: var(--high-contrast-toggle-switch, var(--color-system-linktext));
     }
 
-        html[dir="rtl"] .toggle-container .switch::before {
-        right: calc(var(--high-contrast-border-width-medium) * -1);
-        left: unset;
+        html[dir="rtl"] html[dir="rtl"] .toggle-container .label input[type="checkbox"]:checked + .switch::before {
+        transform: translate(20px, -11px);
     }
 
     }

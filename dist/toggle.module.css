@@ -59,14 +59,6 @@
     transition: var(--transition-default);
 }
 
-/** RTL TOGGLE START **/
-html[dir="rtl"] .toggle-container .switch::before {
-    right: calc(var(--theme-border-width-medium) * -1);
-    left: unset;
-}
-
-/** RTL TOGGLE END **/
-
 .toggle-container .label input[type="checkbox"] {
     width: 44px;
     height: 16px;
@@ -83,6 +75,13 @@ html[dir="rtl"] .toggle-container .switch::before {
 .toggle-container .label input[type="checkbox"]:checked + .switch {
     width: 100%;
 }
+
+/** RTL TOGGLE START **/
+html[dir="rtl"] .toggle-container .label input[type="checkbox"]:checked + .switch::before {
+    transform: translate(0, -11px);
+}
+
+/** RTL TOGGLE END **/
 
 /* High Contrast / Forced-Colors: */
 @media (forced-colors: active) {
@@ -109,9 +108,8 @@ html[dir="rtl"] .toggle-container .switch::before {
     }
 
     /** RTL TOGGLE START **/
-    html[dir="rtl"] .toggle-container .switch::before {
-        right: calc(var(--high-contrast-border-width-medium) * -1);
-        left: unset;
+    html[dir="rtl"] html[dir="rtl"] .toggle-container .label input[type="checkbox"]:checked + .switch::before {
+        transform: translate(20px, -11px);
     }
 
     /** RTL TOGGLE END **/
