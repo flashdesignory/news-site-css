@@ -78,7 +78,7 @@ sheet.replaceSync(`.toggle-outer {
 }
 
 html[dir="rtl"] .toggle-container .label input[type="checkbox"]:checked + .switch::before {
-    transform: translate(0, -11px);
+    transform: translate(var(--theme-rtl-toggle-switch-position), -11px);
 }
 
 
@@ -105,7 +105,7 @@ html[dir="rtl"] .toggle-container .label input[type="checkbox"]:checked + .switc
     }
 
         html[dir="rtl"] .toggle-container .label input[type="checkbox"]:checked + .switch::before {
-        transform: translate(20px, -11px);
+        transform: translate(var(--high-contrast-rtl-toggle-switch-position), -11px);
     }
 
     }

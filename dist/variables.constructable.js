@@ -74,7 +74,8 @@ sheet.replaceSync(`:root {
     --index-dropdown-input: 201;
     --index-dropdown-label: 202;
 
-        --theme-border-width-small: 0;
+        --theme-rtl-toggle-switch-position: 0;
+    --theme-border-width-small: 0;
     --theme-border-width-medium: 0;
     --theme-small-border: none;
     --theme-medium-border: none;
@@ -125,7 +126,8 @@ sheet.replaceSync(`:root {
     --color-system-canvas: var(--color-utils-white);
     --color-system-neutral: var(--color-utils-black);
 
-            --high-contrast-border-width-small: 1px;
+            --high-contrast-rtl-toggle-switch-position: 20px;
+    --high-contrast-border-width-small: 1px;
     --high-contrast-border-width-medium: 2px;
     --high-contrast-small-border: var(--high-contrast-border-width-small) solid var(--color-utils-black);
     --high-contrast-medium-border: var(--high-contrast-border-width-medium) solid var(--color-utils-black);
@@ -155,7 +157,8 @@ sheet.replaceSync(`:root {
 }
 
 :root.forced-colors {
-        --theme-border-width-small: 1px;
+        --theme-rtl-toggle-switch-position: 20px;
+    --theme-border-width-small: 1px;
     --theme-border-width-medium: 2px;
     --theme-small-border: var(--theme-border-width-small) solid var(--color-system-neutral);
     --theme-medium-border: var(--theme-border-width-medium) solid var(--color-system-neutral);
