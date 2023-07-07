@@ -39,7 +39,7 @@ sheet.replaceSync(`.form-container {
 
 .form-actions .form-actions-item {
     height: 40px;
-    flex-grow: 1;
+    width: 50%;
 }
 
 .form-actions .form-actions-item:not(:last-child) {
