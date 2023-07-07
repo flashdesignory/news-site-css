@@ -45,10 +45,10 @@
     margin-right: var(--content-spacing-medium);
 }
 
-/** RTL TOAST START **/
+/** RTL FORM START **/
 html[dir="rtl"] .form-actions .form-actions-item:not(:last-child){
     margin-left: var(--content-spacing-medium);
     margin-right: unset;
 }
 
-/** RTL TOAST END **/
+/** RTL FORM END **/

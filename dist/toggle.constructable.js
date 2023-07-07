@@ -77,6 +77,11 @@ sheet.replaceSync(`.toggle-outer {
     width: 100%;
 }
 
+html[dir="rtl"] .toggle-container .label input[type="checkbox"]:checked + .switch::before {
+    transform: translate(0, -11px);
+}
+
+
 @media (forced-colors: active) {
     .toggle-container {
         forced-color-adjust: none;

@@ -908,13 +908,13 @@ img::after {
     margin-right: var(--content-spacing-medium);
 }
 
-/** RTL TOAST START **/
+/** RTL FORM START **/
 html[dir="rtl"] .form-actions .form-actions-item:not(:last-child){
     margin-left: var(--content-spacing-medium);
     margin-right: unset;
 }
 
-/** RTL TOAST END **/
+/** RTL FORM END **/
 /* Layout visualization */
 .preview {
     min-height: 100px;
@@ -2291,6 +2291,13 @@ html[dir="rtl"] .article-image-tag svg {
 .toggle-container .label input[type="checkbox"]:checked + .switch {
     width: 100%;
 }
+
+/** RTL TOGGLE START **/
+html[dir="rtl"] .toggle-container .label input[type="checkbox"]:checked + .switch::before {
+    transform: translate(0, -11px);
+}
+
+/** RTL TOGGLE END **/
 
 /* High Contrast / Forced-Colors: */
 @media (forced-colors: active) {
