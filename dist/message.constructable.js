@@ -30,12 +30,11 @@ sheet.replaceSync(`.message {
 
 .message-close-button {
     position: absolute;
-    top: var(--content-spacing-small);
-    right: var(--content-spacing-small);
-    width: var(--icon-size-small);
-    height: var(--icon-size-small);
+    top: var(--content-spacing-medium);
+    right: var(--content-spacing-medium);
+    width: var(--icon-size-medium);
+    height: var(--icon-size-medium);
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     cursor: pointer;

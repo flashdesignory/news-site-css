@@ -30,9 +30,12 @@ sheet.replaceSync(`.sidebar {
     position: absolute;
     top: var(--content-spacing-medium);
     right: var(--content-spacing-medium);
-    width: var(--icon-size-small);
-    height: var(--icon-size-small);
+    width: var(--icon-size-medium);
+    height: var(--icon-size-medium);
     display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 .sidebar-close-button-icon {
