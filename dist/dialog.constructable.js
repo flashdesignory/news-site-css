@@ -7,7 +7,6 @@ sheet.replaceSync(`.dialog {
     height: 240px;
     bottom: 40px;
     inset-inline-start: 40px;
-    right: unset;
     background-color: var(--theme-dialog-background);
     z-index: var(--index-important);
     border-radius: var(--border-radius-medium);
