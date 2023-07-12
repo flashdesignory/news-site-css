@@ -12,7 +12,7 @@ sheet.replaceSync(`.navbar {
     margin: 0;
     width: var(--icon-size);
     height: var(--icon-size);
-    left: 24px;
+    inset-inline-start: 24px;
     top: 4px;
     z-index: var(--index-nav-input);
 }
@@ -53,7 +53,7 @@ sheet.replaceSync(`.navbar {
 .navbar-content {
     display: flex;
     flex-direction: column;
-    margin-left: var(--content-spacing-large);
+    margin-inline-start: var(--content-spacing-large);
 }
 
 .navbar-list {
@@ -74,7 +74,7 @@ sheet.replaceSync(`.navbar {
 }
 
 .navbar-item:not(:last-child) {
-    margin-right: var(--content-spacing-large);
+    margin-inline-end: var(--content-spacing-large);
 }
 
 .navbar-dropdown-item {
@@ -82,7 +82,7 @@ sheet.replaceSync(`.navbar {
 }
 
 .navbar-dropdown-item:not(:last-child) {
-    margin-right: 0;
+    margin-inline-end: 0;
 }
 
 .navbar-item a {
@@ -123,27 +123,6 @@ sheet.replaceSync(`.navbar {
     display: none;
 }
 
-html[dir="rtl"] #navbar-toggle {
-    right: 24px;
-    left: unset;
-}
-
-html[dir="rtl"] .navbar-content {
-    margin-right: var(--content-spacing-large);
-    margin-left: unset;
-}
-
-html[dir="rtl"] .navbar-item:not(:last-child) {
-    margin-left: var(--content-spacing-large);
-    margin-right: unset;
-}
-
-html[dir="rtl"] .navbar-dropdown-item:not(:last-child) {
-    margin-left: 0;
-    margin-right: unset;
-}
-
-
 @media (max-width: 767px) {
     #navbar-toggle,
     .navbar-label {
@@ -183,7 +162,7 @@ html[dir="rtl"] .navbar-dropdown-item:not(:last-child) {
         justify-content: flex-start;
         margin: 0;
         position: absolute;
-        left: 0;
+        inset-inline-start: 0;
         top: 0;
         background-color: var(--theme-ui-foreground);
         width: 100%;
@@ -210,13 +189,7 @@ html[dir="rtl"] .navbar-dropdown-item:not(:last-child) {
         justify-content: center;
         margin: var(--content-spacing-xlarge) 0;
     }
-
-        html[dir="rtl"] #navbar-toggle:checked ~ .navbar-content {
-        right: 0;
-        left: unset;
-    }
-
-    }
+}
 
 @media (forced-colors: active) {
     .navbar-label-icon {

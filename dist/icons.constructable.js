@@ -106,12 +106,7 @@ html[dir="rtl"] .animated-icon {
 }
 
 .hamburger-icon .animated-icon-inner span {
-    left: var(--animated-icon-center-negative);
-}
-
-html[dir="rtl"] .hamburger-icon .animated-icon-inner span {
-    right: var(--animated-icon-center-negative);
-    left: unset;
+    inset-inline-start: var(--animated-icon-center-negative);
 }
 
 html[dir="rtl"] .arrow-icon {

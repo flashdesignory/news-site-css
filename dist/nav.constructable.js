@@ -53,7 +53,6 @@ sheet.replaceSync(`.page-navigation {
     cursor: pointer;
 }
 
-/* stylelint-disable */
 .page-navigation-logo svg path {
     fill: var(--theme-icon-fill-light);
     transition: var(--transition-default);
@@ -62,7 +61,6 @@ sheet.replaceSync(`.page-navigation {
 .page-navigation-logo:hover svg path {
     fill: var(--theme-icon-fill-lighter);
 }
-/* stylelint-enable */
 
 .page-navigation-button {
     border: 1px solid var(--color-utils-offwhite);
@@ -84,16 +82,9 @@ sheet.replaceSync(`.page-navigation {
 
 @media (max-width: 767px) {
     .page-navigation-logo {
-        margin-left: var(--content-spacing-small);
+        margin-inline-start: var(--content-spacing-small);
     }
-
-    /** RTL NAV START **/
-    html[dir="rtl"] .page-navigation-logo {
-        margin-right: var(--content-spacing-small);
-        margin-left: unset;
-    }
-
-    }
+}
 
 @media (forced-colors: active) {
     .page-navigation::after {

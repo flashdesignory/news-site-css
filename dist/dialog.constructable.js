@@ -6,7 +6,7 @@ sheet.replaceSync(`.dialog {
     width: 100%;
     height: 240px;
     bottom: 40px;
-    left: 40px;
+    inset-inline-start: 40px;
     right: unset;
     background-color: var(--theme-dialog-background);
     z-index: var(--index-important);
@@ -30,7 +30,7 @@ sheet.replaceSync(`.dialog {
 .dialog-close-button {
     position: absolute;
     top: var(--content-spacing-medium);
-    right: var(--content-spacing-medium);
+    inset-inline-end: var(--content-spacing-medium);
     width: var(--icon-size-medium);
     height: var(--icon-size-medium);
     display: flex;
@@ -83,17 +83,6 @@ sheet.replaceSync(`.dialog {
         margin: 0 auto;
     }
 }
-
-html[dir="rtl"] .dialog {
-    right: 40px;
-    left: unset;
-}
-
-html[dir="rtl"] .dialog-close-button {
-    left: var(--content-spacing-medium);
-    right: unset;
-}
-
 
 @media (forced-colors: active) {
     .dialog {

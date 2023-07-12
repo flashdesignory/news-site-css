@@ -31,7 +31,7 @@ sheet.replaceSync(`.message {
 .message-close-button {
     position: absolute;
     top: var(--content-spacing-medium);
-    right: var(--content-spacing-medium);
+    inset-inline-end: var(--content-spacing-medium);
     width: var(--icon-size-medium);
     height: var(--icon-size-medium);
     display: flex;
@@ -72,13 +72,6 @@ sheet.replaceSync(`.message {
     display: inline-block;
     text-align: center;
 }
-
-/** RTL MESSAGE START **/
-html[dir="rtl"] .message-close-button {
-    left: var(--content-spacing-small);
-    right: unset;
-}
-
 
 @media (forced-colors: active) {
     .message::after {

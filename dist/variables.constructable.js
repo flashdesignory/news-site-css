@@ -1,6 +1,7 @@
 const sheet = new CSSStyleSheet();
 sheet.replaceSync(`:root {
         --color-utils-red: #c00;
+    --color-utils-blue: #00aecd;
     --color-utils-black: #0c0c0c;
     --color-utils-white: #fff;
     --color-utils-gray-dark: #2c2c2c;
@@ -12,9 +13,6 @@ sheet.replaceSync(`:root {
     --color-opacity-black-50: rgb(0 0 0 / 50%);
     --color-opacity-black-75: rgb(0 0 0 / 75%);
     --color-opacity-black-100: rgb(0 0 0 / 100%);
-    --theme-advertisement-copy: #b1b1b1;
-    --theme-advertisement-icon-fill: #00aecd;
-    --theme-advertisement-icon-background: #fff;
 
         --border-radius-xsmall: 2px;
     --border-radius-small: 4px;
@@ -81,6 +79,9 @@ sheet.replaceSync(`:root {
     --theme-small-border: var(--theme-border-width-small) solid transparent;
     --theme-medium-border: var(--theme-border-width-medium) solid transparent;
     --theme-text-decoration: none;
+    --theme-advertisement-copy: var(--color-utils-gray-lighter);
+    --theme-advertisement-icon-fill: var(--color-utils-blue);
+    --theme-advertisement-icon-background: var(--color-utils-white);
     --theme-ui-background: var(--color-utils-white);
     --theme-ui-foreground: var(--color-utils-black);
     --theme-dialog-background: var(--color-utils-white);
@@ -122,7 +123,7 @@ sheet.replaceSync(`:root {
 
         --color-system-linktext: #00009f;
     --color-system-linkface: #e6e6e6;
-    --color-system-buttontext: #000000;
+    --color-system-buttontext: #000;
     --color-system-buttonface: #efefef;
     --color-system-canvas: var(--color-utils-white);
     --color-system-neutral: var(--color-utils-black);

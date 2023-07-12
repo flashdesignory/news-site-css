@@ -57,7 +57,7 @@ sheet.replaceSync(`.advertisement-container {
     width: 31px;
     height: 15px;
     position: absolute;
-    right: 1px;
+    inset-inline-end: 1px;
     top: 1px;
 }
 
@@ -81,11 +81,5 @@ sheet.replaceSync(`.advertisement-container {
     stroke: var(--theme-advertisement-icon-fill);
     fill: var(--theme-advertisement-icon-fill);
 }
-
-html[dir="rtl"] .advertisement-icons {
-    left: 1px;
-    right: unset;
-}
-
 `);
 export default sheet;

@@ -52,9 +52,8 @@ sheet.replaceSync(`.toggle-outer {
     content: "";
     height: 22px;
     width: 22px;
-    top: 50%;
+    top: calc(50% - 11px);
     left: calc(var(--theme-border-width-medium) * -1);
-    transform: translateY(-11px);
     background-color: var(--theme-toggle-switch);
     border-radius: var(--border-radius-50);
     transition: var(--transition-default);
@@ -70,13 +69,12 @@ sheet.replaceSync(`.toggle-outer {
 }
 
 .toggle-container .label input[type="checkbox"]:checked + .switch::before {
-    transform: translate(20px, -11px);
+    transform: translateX(20px);
 }
 
 .toggle-container .label input[type="checkbox"]:checked + .switch {
     width: 100%;
 }
-
 
 @media (forced-colors: active) {
     .toggle-container {
@@ -99,7 +97,6 @@ sheet.replaceSync(`.toggle-outer {
         left: calc(var(--high-contrast-border-width-medium) * -1);
         background-color: var(--high-contrast-toggle-switch, var(--color-system-linktext));
     }
-
-    }
+}
 `);
 export default sheet;

@@ -83,16 +83,8 @@
 
 @media (max-width: 767px) {
     .page-navigation-logo {
-        margin-left: var(--content-spacing-small);
+        margin-inline-start: var(--content-spacing-small);
     }
-
-    /** RTL NAV START **/
-    html[dir="rtl"] .page-navigation-logo {
-        margin-right: var(--content-spacing-small);
-        margin-left: unset;
-    }
-
-    /** RTL NAV END **/
 }
 
 /* High Contrast / Forced-Colors: */

@@ -14,7 +14,7 @@ sheet.replaceSync(`.article-header {
     content: "";
     display: block;
     position: absolute;
-    left: 0;
+    inset-inline-start: 0;
     top: 0;
 }
 
@@ -35,14 +35,12 @@ sheet.replaceSync(`.article-header {
     width: 100%;
 }
 
-/* stylelint-disable */
 .article-header a {
     display: flex;
     text-decoration: none;
     color: var(--theme-text-dark);
     pointer-events: auto;
 }
-/* stylelint-enable */
 
 .article-body {
     display: flex;
@@ -50,7 +48,6 @@ sheet.replaceSync(`.article-header {
     position: relative;
 }
 
-/* stylelint-disable */
 .article-body a {
     text-decoration: none;
     color: var(--theme-link-color);
@@ -62,7 +59,6 @@ sheet.replaceSync(`.article-header {
     color: var(--theme-link-hover);
     text-decoration: underline;
 }
-/* stylelint-enable */
 
 .article-image-container {
     display: flex;
@@ -98,7 +94,7 @@ sheet.replaceSync(`.article-header {
     flex-direction: row;
     align-items: center;
     position: absolute;
-    left: 0;
+    inset-inline-start: 0;
     bottom: 0;
     font-size: var(--font-size-small);
     background-color: var(--theme-tag-background-gray);
@@ -119,14 +115,12 @@ sheet.replaceSync(`.article-header {
 .article-image-tag svg {
     width: var(--icon-size-tiny);
     height: var(--icon-size-tiny);
-    margin-right: var(--content-spacing-small);
+    margin-inline-end: var(--content-spacing-small);
 }
 
-/* stylelint-disable */
 .article-image-tag svg path {
     fill: var(--theme-icon-fill-light);
 }
-/* stylelint-enable */
 
 .article-title {
     display: flex;
@@ -146,7 +140,6 @@ sheet.replaceSync(`.article-header {
     white-space: pre-wrap;
 }
 
-/* remove margin-top from first element */
 .article-content:first-child {
     margin-top: 0;
 }
@@ -192,7 +185,6 @@ sheet.replaceSync(`.article-header {
     border-bottom: none;
 }
 
-/* excerpt start */
 .article-list-item .article-hero {
     display: flex;
     width: 33.33%;
@@ -204,13 +196,11 @@ sheet.replaceSync(`.article-header {
 
 .article-list-item .article-content {
     margin-top: 0;
-    margin-left: var(--content-spacing-large);
+    margin-inline-start: var(--content-spacing-large);
     width: 66.66%;
 }
 
-/* excerpt end */
 
-/* article-list start */
 .article-list-content {
     display: flex;
     flex-direction: column;
@@ -221,30 +211,6 @@ sheet.replaceSync(`.article-header {
 .article-list-content .article-title {
     margin-top: 0;
     margin-bottom: var(--content-spacing-large);
-}
-
-/* article-list end */
-
-/** RTL ARTICLE START **/
-html[dir="rtl"] .article-header::before,
-html[dir="rtl"] .article-header::after {
-    right: 0;
-    left: unset;
-}
-
-html[dir="rtl"] .article-image-tag {
-    right: 0;
-    left: unset;
-}
-
-html[dir="rtl"] .article-list-item .article-content {
-    margin-right: var(--content-spacing-large);
-    margin-left: unset;
-}
-
-html[dir="rtl"] .article-image-tag svg {
-    margin-left: var(--content-spacing-small);
-    margin-right: unset;
 }
 
 

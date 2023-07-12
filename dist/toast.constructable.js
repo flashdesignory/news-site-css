@@ -25,7 +25,7 @@ sheet.replaceSync(`.toast {
 .toast-close-button {
     position: absolute;
     top: var(--content-spacing-medium);
-    right: var(--content-spacing-medium);
+    inset-inline-end: var(--content-spacing-medium);
     width: var(--icon-size-medium);
     height: var(--icon-size-medium);
     display: flex;
@@ -86,19 +86,8 @@ sheet.replaceSync(`.toast {
 }
 
 .toast-actions .toast-actions-button:not(:last-child) {
-    margin-right: var(--content-spacing-large);
+    margin-inline-end: var(--content-spacing-large);
 }
-
-html[dir="rtl"] .toast-actions .toast-actions-button:not(:last-child) {
-    margin-left: var(--content-spacing-large);
-    margin-right: unset;
-}
-
-html[dir="rtl"] .toast-close-button {
-    left: var(--content-spacing-small);
-    right: unset;
-}
-
 
 @media (forced-colors: active) {
     .toast {

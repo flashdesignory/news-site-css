@@ -13,7 +13,7 @@ sheet.replaceSync(`.dropdown {
     padding: 0;
     width: 100%;
     height: calc(var(--nav-button-height) - 2px);
-    left: 0;
+    inset-inline-start: 0;
     top: 1px;
     z-index: var(--index-dropdown-input);
     transition: none;
@@ -43,7 +43,7 @@ sheet.replaceSync(`.dropdown {
 }
 
 .dropdown-label-text {
-    margin-right: 8px;
+    margin-inline-end: 8px;
 }
 
 .dropdown-toggle:checked ~ .dropdown-label div span span:nth-child(1) {
@@ -61,16 +61,11 @@ sheet.replaceSync(`.dropdown {
     display: none;
     position: absolute;
     top: 100%;
-    left: calc(var(--content-spacing-small) * -1);
+    inset-inline-start: calc(var(--content-spacing-small) * -1);
     min-width: 200px;
     background-color: var(--theme-ui-foreground);
     z-index: var(--index-dropdown);
     box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%);
-}
-
-html[dir="rtl"] .dropdown-content {
-    right: calc(var(--content-spacing-small) * -1);
-    left: unset;
 }
 
 .dropdown-toggle:checked ~ .dropdown-content {
@@ -98,17 +93,6 @@ html[dir="rtl"] .dropdown-content {
         margin-top: var(--content-spacing-small);
     }
 }
-
-html[dir="rtl"] .dropdown-toggle {
-    right: 0;
-    left: unset;
-}
-
-html[dir="rtl"] .dropdown-label-text {
-    margin-left: 8px;
-    margin-right: unset;
-}
-
 
 @media (forced-colors: active) {
     .dropdown-label {

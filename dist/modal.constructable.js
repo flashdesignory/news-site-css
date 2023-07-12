@@ -39,7 +39,7 @@ sheet.replaceSync(`.modal {
 .modal-close-button {
     position: absolute;
     top: var(--content-spacing-medium);
-    right: var(--content-spacing-medium);
+    inset-inline-end: var(--content-spacing-medium);
     width: var(--icon-size-medium);
     height: var(--icon-size-medium);
     display: flex;
@@ -83,7 +83,7 @@ sheet.replaceSync(`.modal {
 }
 
 .modal-actions .modal-actions-button:not(:last-child) {
-    margin-right: var(--content-spacing-large);
+    margin-inline-end: var(--content-spacing-large);
 }
 
 @media (max-width: 419px) {
@@ -91,17 +91,6 @@ sheet.replaceSync(`.modal {
         width: calc(100% - var(--content-spacing-xxxlarge) * 2);
     }
 }
-
-html[dir="rtl"] .modal-actions .modal-actions-button:not(:last-child) {
-    margin-left: var(--content-spacing-large);
-    margin-right: unset;
-}
-
-html[dir="rtl"] .modal-close-button {
-    left: var(--content-spacing-medium);
-    right: unset;
-}
-
 
 @media (forced-colors: active) {
     .modal-content {

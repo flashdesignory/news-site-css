@@ -78,7 +78,7 @@ sheet.replaceSync(`.page-footer {
 }
 
 .footer-links .footer-links-item:not(:last-child) {
-    margin-right: var(--content-spacing-large);
+    margin-inline-end: var(--content-spacing-large);
 }
 
 .footer-links .footer-links-item a {
@@ -124,13 +124,6 @@ sheet.replaceSync(`.page-footer {
         margin-bottom: var(--content-spacing-large);
     }
 }
-
-/** RTL FOOTER START **/
-html[dir="rtl"] .footer-links .footer-links-item:not(:last-child) {
-    margin-left: var(--content-spacing-large);
-    margin-right: unset;
-}
-
 
 @media (forced-colors: active) {
     .page-footer::before {
